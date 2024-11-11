@@ -3,6 +3,11 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
+In this course you will be learning how to effectively collaborate
+with colleagues using Git and GitHub.
+By the end of the course you should have the skills and knowledge
+to decide what working practices are best for you.
+
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
 ## Prerequisites
@@ -16,5 +21,3 @@ lesson. Please ensure you have worked through the
 beginner material prior to starting this course.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
