@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/01-working-practices.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/02-branching.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/404.html</loc>
   </url>
   <url>
@@ -16,13 +22,25 @@
     <loc>https://metoffice.github.io/git-working-practices/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/aio.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/discuss.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/fcm-git_cheat_sheet.html</loc>
   </url>
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/images.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/index.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/01-working-practices.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/02-branching.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/404.html</loc>
@@ -40,19 +58,37 @@
     <loc>https://metoffice.github.io/git-working-practices/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/discuss.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/fcm-git_cheat_sheet.html</loc>
   </url>
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/key-points.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/profiles.html</loc>
