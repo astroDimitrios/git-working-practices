@@ -7,6 +7,12 @@
     <loc>https://metoffice.github.io/git-working-practices/02-branching.html</loc>
   </url>
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/03-feature-branch.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/04-review.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/404.html</loc>
   </url>
   <url>
@@ -41,6 +47,12 @@
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/02-branching.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/03-feature-branch.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/04-review.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/404.html</loc>
