@@ -61,6 +61,8 @@ contact: 'd.theodorakis@metoffice.gov.uk'
 episodes:
 - 01-working-practices.md
 - 02-branching.md
+- 03-feature-branch.md
+- 04-review.md
 - Break.md
 - End.md
 

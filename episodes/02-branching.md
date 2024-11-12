@@ -6,7 +6,7 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Describe the Feature Branch and Forking models
+- Describe the Feature Branch and Forking models.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
