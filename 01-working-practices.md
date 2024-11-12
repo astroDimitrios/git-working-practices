@@ -6,7 +6,7 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Describe a simple development flow using git and GitHub
+- Describe a simple development flow using git and GitHub.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
