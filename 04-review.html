@@ -328,7 +328,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Review</h1>
-        <p>Last updated on 2024-11-12 |
+        <p>Last updated on 2024-11-14 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/04-review.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -364,11 +364,12 @@
 </div>
 </div>
 <p>In this section we will explore how to properly review code and
-suggest changes if necessary. Head back to your own <code>weather</code>
-repository. You should see an open PR from your Collaborator.</p>
+suggest changes if necessary. We will continue to work in pairs. The
+Owner should navigate back to their own <code>weather</code> repository.
+You should see an open PR from your Collaborator.</p>
 <section><h2 class="section-heading" id="reviewing-changes">Reviewing Changes<a class="anchor" aria-label="anchor" href="#reviewing-changes"></a></h2>
-<hr class="half-width"><p>Make sure you are on the PR your Collaborator has opened on the
-repository you own.</p>
+<hr class="half-width"><p>As the Owner make sure you are on the PR your Collaborator has opened
+on your repository.</p>
 <p>You can add general science and code review comments in the
 <strong>Conversation</strong> tab. To review specific files go to the
 <strong>Files changed</strong> tab:</p>
@@ -395,8 +396,7 @@ add a comment, and select <strong>Request changes</strong>. When you’re
 finished click the green <strong>Submit review</strong> button.</p>
 <figure><img src="fig/pr-suggestion-2.png" alt="A screenshot of a PR showing the diff in the Files changed tab showing the review popup." class="figure mx-auto d-block"></figure><p>The PRs <strong>Conversation</strong> tab now looks like this:</p>
 <figure><img src="fig/pr-review-1.png" alt="A screenshot of a PR showing the Conversation tab with a review that has requested changes." class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="responding-to-review">Responding to Review<a class="anchor" aria-label="anchor" href="#responding-to-review"></a></h2>
-<hr class="half-width"><p>Make sure you are on the PR you opened on your Collaborators
-repository.</p>
+<hr class="half-width"><p>Now it is the Collaborators turn to respond to the review.</p>
 <p>You can see merging is blocked because our reviewer has requested
 changes. You also have the option to commit the suggested change to your
 branch directly via the PR. Click on the <strong>Commit
@@ -406,8 +406,7 @@ suggestion</strong> button. In the popup add a description then click on
 your local copy and then marked the conversation with the suggested
 change as resolved.</p>
 </section><section><h2 class="section-heading" id="approving-changes">Approving Changes<a class="anchor" aria-label="anchor" href="#approving-changes"></a></h2>
-<hr class="half-width"><p>Make sure you are on the PR your Collaborator has opened on the
-repository you own.</p>
+<hr class="half-width"><p>Now the Owner can respond to the Collaborators final changes.</p>
 <p>The Conversation tab should update to show the suggestion as
 <strong>Outdated</strong> because it has been resolved by the
 Collaborator. It also gives you the option to view the new changes since
@@ -441,8 +440,11 @@ the PR.</p>
 <p>In the <a href="https://www.astropython.com/git-novice/10-pull-requests.html#updating-your-local-repo" class="external-link">git-novice</a>
 lesson you learnt how to pull changes and clean up your branches after
 merging a PR.</p>
-<ol style="list-style-type: decimal"><li>Update your local copy of the <code>weather</code> repository</li>
+<p>The Collaborator can now:</p>
+<ol style="list-style-type: decimal"><li>Update their local copy of the <code>weather</code> repository</li>
 <li>Delete any branches that are no longer necessary</li>
+</ol><p>The Owner can now:</p>
+<ol style="list-style-type: decimal"><li>Update their local copy of the <code>weather</code> repository</li>
 </ol></div>
 </div>
 </div>
@@ -451,7 +453,7 @@ merging a PR.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Update your local copy of the <code>weather</code> repository</li>
 </ol><div class="codewrapper sourceCode" id="cb1">
@@ -500,6 +502,18 @@ URL: git@github.com:mo-eormerod/weather.git
 <pre class="output" tabindex="0"><code>Deleted branch 3_shipping-forecast (was 17a1454).</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div id="switch-roles-and-repeat" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="switch-roles-and-repeat" class="callout-inner">
+<h3 class="callout-title">Switch Roles and Repeat</h3>
+<div class="callout-content">
+<p>Switch roles. Repeat the process of making changes on a feature
+branch and reviewing the changes (episodes <a href="./03-feature-branch.html">03</a> and <a href="./04-review.html">04</a>).</p>
 </div>
 </div>
 </div>
@@ -579,8 +593,8 @@ changed</strong> tab using the diff.</li>
   "url": "https://metoffice.github.io/git-working-practices/04-review.html",
   "identifier": "https://metoffice.github.io/git-working-practices/04-review.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2024-11-12",
-  "datePublished": "2024-11-12"
+  "dateModified": "2024-11-14",
+  "datePublished": "2024-11-14"
 }
 
   </script><script>
