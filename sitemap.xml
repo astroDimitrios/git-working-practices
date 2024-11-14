@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://metoffice.github.io/git-working-practices/01-issues.html</loc>
+  </url>
+  <url>
     <loc>https://metoffice.github.io/git-working-practices/01-working-practices.html</loc>
   </url>
   <url>
@@ -41,6 +44,9 @@
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/index.html</loc>
+  </url>
+  <url>
+    <loc>https://metoffice.github.io/git-working-practices/instructor/01-issues.html</loc>
   </url>
   <url>
     <loc>https://metoffice.github.io/git-working-practices/instructor/01-working-practices.html</loc>

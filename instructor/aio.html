@@ -246,7 +246,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-working-practices.html">1. Working Practices</a>
+        <a href="01-issues.html">1. Issues</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -372,11 +372,11 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-01-working-practices"><p>Content from <a href="01-working-practices.html">Working Practices</a></p>
+<section id="aio-01-issues"><p>Content from <a href="01-issues.html">Issues</a></p>
 <hr>
-<p>Last updated on 2024-11-12 |
+<p>Last updated on 2024-11-14 |
 
-        <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/01-working-practices.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/01-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -389,7 +389,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What does using git and GitHub look like in practice?</li>
+<li>What information should go on an Issue?</li>
 </ul>
 </div>
 </div>
@@ -399,37 +399,27 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Describe a simple development flow using git and GitHub.</li>
+<li>Create an Issue with the correct labels.</li>
+<li>Assign yourself to an Issue.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>Good working practices help us avoid mistakes, keep our codebases
-secure, and help us write sustainable code. In this lesson we’ll look at
-what good practice using git and GitHub might look like.</p>
-<p>The process to develop new code with git and GitHub looks like
-this:</p>
-<ol style="list-style-type: decimal">
-<li>Open an Issue describing the feature or bug</li>
-<li>Create a branch to develop your changes on</li>
-<li>Make changes to your working copy</li>
-<li>Write tests</li>
-<li>Write documentation</li>
-<li>Open a Pull Request</li>
-<li>Review your changes</li>
-<li>Merge the Pull Request and close the Issue</li>
-<li>Tidy up your branches</li>
-</ol>
-<section><h2 class="section-heading" id="issues">Issues<a class="anchor" aria-label="anchor" href="#issues"></a>
-</h2>
-<hr class="half-width">
 <p>GitHub Issues (tickets) are where you plan and track work. You can
 assign individuals to Issues and label them with a relevant tag such as
 <code>bug</code> or <code>enhancement</code>. Before opening a new Issue
 check whether there is already one open for the feature or bug by using
 GitHub’s search.</p>
+<p>Here’s some advice for writing good Issues:</p>
+<ul>
+<li>Be clear and concise, provide plenty of detail</li>
+<li>State the expected outcomes</li>
+<li>Tag relevant collaborators</li>
+<li>Break up large Issues into several small ones and or use checklists
+to track tasks in the Issue</li>
+</ul>
 <figure><img src="../fig/github-issue.png" alt="A screenshot of a GitHub Issue." class="figure mx-auto d-block"></figure><div id="creating-an-issue" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -439,6 +429,11 @@ GitHub’s search.</p>
 <div class="callout-content">
 <p>Practice opening up an Issue on your <code>weather</code> repository.
 Your Issue will be a feature request for the shipping forecast.</p>
+<ol style="list-style-type: decimal">
+<li>Make sure you give the Issue an accurate title and description</li>
+<li>Assign a label to the Issue</li>
+<li>Assign yourself to the Issue</li>
+</ol>
 </div>
 </div>
 </div>
@@ -454,8 +449,7 @@ Your Issue will be a feature request for the shipping forecast.</p>
 </ul>
 </div>
 </div>
-</div>
-</section></section><section id="aio-02-branching"><p>Content from <a href="02-branching.html">Branching Models</a></p>
+</div></section><section id="aio-02-branching"><p>Content from <a href="02-branching.html">Branching Models</a></p>
 <hr>
 <p>Last updated on 2024-11-12 |
 
@@ -902,7 +896,7 @@ see the new commit.</p>
   Some more about remotes
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>In this episode and the previous one, our local repository has had a
 single “remote”, called <code>origin</code>. A remote is a copy of the
