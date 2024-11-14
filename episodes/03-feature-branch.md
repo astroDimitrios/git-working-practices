@@ -28,6 +28,9 @@ the Owner's repository.
 We will switch roles at the end, so both persons will
 play Owner and Collaborator.
 
+While working together be sure to share what you
+are doing with your partner.
+
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Practicing By Yourself
@@ -195,7 +198,7 @@ In the git-novice lesson you practised opening a
 
 You should see a notification appear on GitHub telling you the
 `3_shipping-forecast` branch had recent pushes.
-Click on the green **Compare & pull request** button to
+The Collaborator should click on the green **Compare & pull request** button to
 open the PR.
 
 If you don't see this notification click on the branches dropdown

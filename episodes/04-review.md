@@ -20,13 +20,14 @@ exercises: 10
 
 In this section we will explore how to properly review
 code and suggest changes if necessary.
-Head back to your own `weather` repository.
+We will continue to work in pairs.
+The Owner should navigate back to their own `weather` repository.
 You should see an open PR from your Collaborator.
 
 ## Reviewing Changes
 
-Make sure you are on the PR your Collaborator has opened
-on the repository you own.
+As the Owner make sure you are on the PR your Collaborator has opened
+on your repository.
 
 You can add general science and code review comments
 in the **Conversation** tab.
@@ -81,8 +82,7 @@ The PRs **Conversation** tab now looks like this:
 
 ## Responding to Review
 
-Make sure you are on the PR you opened
-on your Collaborators repository.
+Now it is the Collaborators turn to respond to the review.
 
 You can see merging is blocked because our reviewer has
 requested changes. You also have the option to commit the
@@ -98,8 +98,7 @@ the suggested change as resolved.
 
 ## Approving Changes
 
-Make sure you are on the PR your Collaborator has opened
-on the repository you own.
+Now the Owner can respond to the Collaborators final changes.
 
 The Conversation tab should update to show the suggestion as
 **Outdated** because it has been resolved by the Collaborator.
@@ -151,8 +150,14 @@ In the [git-novice](https://www.astropython.com/git-novice/10-pull-requests.html
 lesson you learnt how to pull changes
 and clean up your branches after merging a PR.
 
-1. Update your local copy of the `weather` repository
+The Collaborator can now:
+
+1. Update their local copy of the `weather` repository
 2. Delete any branches that are no longer necessary
+
+The Owner can now:
+
+1. Update their local copy of the `weather` repository
 
 :::::::::::::::  solution
 
@@ -201,6 +206,16 @@ Deleted branch 3_shipping-forecast (was 17a1454).
 ```
 
 :::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Switch Roles and Repeat
+
+Switch roles. Repeat the process of making changes
+on a feature branch and reviewing the changes
+(episodes [03](./03-feature-branch.md) and [04](./04-review.md)).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
