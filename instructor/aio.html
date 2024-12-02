@@ -956,7 +956,7 @@ see the new commit.</p>
   Some more about remotes
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>In this episode and the previous one, our local repository has had a
 single “remote”, called <code>origin</code>. A remote is a copy of the
@@ -1205,7 +1205,7 @@ merging a PR.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Update your local copy of the <code>weather</code> repository</li>
@@ -1367,7 +1367,7 @@ the <strong>upstream</strong> repository for you fork.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>To create the conflict at the end of the episode for all learners
 your co-instructor should follow along making the same changes the
@@ -1580,7 +1580,7 @@ you will learn how to deal with conflicts.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Practicing By Yourself </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>If you’re working through this lesson on your own, you won’t see a
 conflict. You should still follow the materials through the next episode
@@ -1986,7 +1986,7 @@ non-textual file that is stored in version control?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Let’s try it with your <code>weather</code> repository. Suppose you
 take a picture of the television forecast and call it
@@ -2682,6 +2682,25 @@ case something goes wrong during the rebase:</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> git branch add_plot_script.backup</span></code></pre>
 </div>
+<p>If at anytime you want to restore the branch from your backup switch
+to the backup:</p>
+<div class="codewrapper sourceCode" id="cb19">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> git switch add_plot_script.backup</span></code></pre>
+</div>
+<p>Delete the branch where rebasing was attempted:</p>
+<div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">$</span> git branch <span class="at">-D</span> add_plot_script</span></code></pre>
+</div>
+<p>Re-create the original branch while still on the backup branch:</p>
+<div class="codewrapper sourceCode" id="cb21">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> git switch <span class="at">-c</span> add_plot_script</span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -2689,10 +2708,10 @@ case something goes wrong during the rebase:</p>
 rebase our three commits we need to provide the commit hash for the
 commit before our three feature branch commits which is
 <code>ed14d18</code> from the log above:</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> git rebase <span class="at">-i</span> ed14d18</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="ex">$</span> git rebase <span class="at">-i</span> ed14d18</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2743,10 +2762,10 @@ to re-order your history.</p>
 to the file or delete all the commit lines.</p>
 <p>After you save and close the file, if your rebase has conflicts, you
 can abort at anytime using:</p>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> git rebase <span class="at">--abort</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="ex">$</span> git rebase <span class="at">--abort</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -2778,29 +2797,29 @@ Once you are satisfied with your changes, run
 <code>plot_lfric.py</code> file, because we asked to amend the commit.
 We can now open up the plotting script and make our changes.</p>
 <p>Opening up the file now shows:</p>
-<div class="codewrapper sourceCode" id="cb24">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> nano plot_lfric.py</span>
-<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> cat plot_lfric.py</span></code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb25">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="co"># pretnd there is code here!</span></span></code></pre>
-</div>
-<p>Modify and save the file so that it reads:</p>
-<div class="codewrapper sourceCode" id="cb26">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="co"># pretend there is code here!</span></span></code></pre>
-</div>
-<p>Add the file and confirm the amendment:</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span><span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> git add plot_lfric.py</span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> +<span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> git commit <span class="at">--amend</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> nano plot_lfric.py</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> cat plot_lfric.py</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb28">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="co"># pretnd there is code here!</span></span></code></pre>
+</div>
+<p>Modify and save the file so that it reads:</p>
+<div class="codewrapper sourceCode" id="cb29">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="co"># pretend there is code here!</span></span></code></pre>
+</div>
+<p>Add the file and confirm the amendment:</p>
+<div class="codewrapper sourceCode" id="cb30">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span><span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> git add plot_lfric.py</span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> +<span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> git commit <span class="at">--amend</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2817,52 +2836,52 @@ lesson</a>. You can see the prompt clearly states we are rebasing,
 <code>REBASE</code>, and that it is on line <code>1/3</code> of the
 rebase to-do file we edited earlier.</p>
 <p>Now we have amended the commit we can continue with the rebase:</p>
-<div class="codewrapper sourceCode" id="cb29">
+<div class="codewrapper sourceCode" id="cb32">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span><span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> git rebase <span class="at">--continue</span></span>
-<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a><span class="ex">Auto-merging</span> plot_lfric.py</span>
-<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a><span class="ex">CONFLICT</span> <span class="er">(</span><span class="ex">content</span><span class="kw">)</span><span class="bu">:</span> Merge conflict in plot_lfric.py</span>
-<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a><span class="ex">error:</span> could not apply 7053de7... Extends the LFRic data plotting script to plot 2D fields</span>
-<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a><span class="ex">hint:</span> Resolve all conflicts manually, mark them as resolved with</span>
-<span id="cb29-6"><a href="#cb29-6" tabindex="-1"></a><span class="ex">hint:</span> <span class="st">"git add/rm &lt;conflicted_files&gt;"</span>, then run <span class="st">"git rebase --continue"</span>.</span>
-<span id="cb29-7"><a href="#cb29-7" tabindex="-1"></a><span class="ex">hint:</span> You can instead skip this commit: run <span class="st">"git rebase --skip"</span>.</span>
-<span id="cb29-8"><a href="#cb29-8" tabindex="-1"></a><span class="ex">hint:</span> To abort and get back to the state before <span class="st">"git rebase"</span>, run <span class="st">"git rebase --abort"</span>.</span>
-<span id="cb29-9"><a href="#cb29-9" tabindex="-1"></a><span class="ex">Could</span> not apply 7053de7... Extends the LFRic data plotting script to plot 2D fields</span>
-<span id="cb29-10"><a href="#cb29-10" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> </span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span><span class="kw">|</span><span class="ex">REBASE</span> 1/3<span class="kw">)</span><span class="ex">$</span> git rebase <span class="at">--continue</span></span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="ex">Auto-merging</span> plot_lfric.py</span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a><span class="ex">CONFLICT</span> <span class="er">(</span><span class="ex">content</span><span class="kw">)</span><span class="bu">:</span> Merge conflict in plot_lfric.py</span>
+<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a><span class="ex">error:</span> could not apply 7053de7... Extends the LFRic data plotting script to plot 2D fields</span>
+<span id="cb32-5"><a href="#cb32-5" tabindex="-1"></a><span class="ex">hint:</span> Resolve all conflicts manually, mark them as resolved with</span>
+<span id="cb32-6"><a href="#cb32-6" tabindex="-1"></a><span class="ex">hint:</span> <span class="st">"git add/rm &lt;conflicted_files&gt;"</span>, then run <span class="st">"git rebase --continue"</span>.</span>
+<span id="cb32-7"><a href="#cb32-7" tabindex="-1"></a><span class="ex">hint:</span> You can instead skip this commit: run <span class="st">"git rebase --skip"</span>.</span>
+<span id="cb32-8"><a href="#cb32-8" tabindex="-1"></a><span class="ex">hint:</span> To abort and get back to the state before <span class="st">"git rebase"</span>, run <span class="st">"git rebase --abort"</span>.</span>
+<span id="cb32-9"><a href="#cb32-9" tabindex="-1"></a><span class="ex">Could</span> not apply 7053de7... Extends the LFRic data plotting script to plot 2D fields</span>
+<span id="cb32-10"><a href="#cb32-10" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> </span></code></pre>
 </div>
 <p>The rebase has tried to apply the second commit which still has the
 spelling mistake resulting in a merge error. Open the file again and
 resolve the conflict:</p>
-<div class="codewrapper sourceCode" id="cb30">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> nano plot_lfric.py </span>
-<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> cat plot_lfric.py </span></code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb31">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
-<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="co"># pretend there is code here!</span></span>
-<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a><span class="op">=======</span></span>
-<span id="cb31-4"><a href="#cb31-4" tabindex="-1"></a><span class="co"># pretnd there is code here!</span></span>
-<span id="cb31-5"><a href="#cb31-5" tabindex="-1"></a><span class="co"># more Python</span></span>
-<span id="cb31-6"><a href="#cb31-6" tabindex="-1"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="dv">3343</span><span class="er">f91</span></span></code></pre>
-</div>
-<p>Modify and save the file so that it reads:</p>
-<div class="codewrapper sourceCode" id="cb32">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="co"># pretend there is code here!</span></span>
-<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="co"># more Python</span></span></code></pre>
-</div>
-<p>Add the file and continue with the rebase:</p>
 <div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> git add plot_lfric.py</span>
-<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> +<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> git rebase <span class="at">--continue</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> nano plot_lfric.py </span>
+<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> cat plot_lfric.py </span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb34">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
+<span id="cb34-2"><a href="#cb34-2" tabindex="-1"></a><span class="co"># pretend there is code here!</span></span>
+<span id="cb34-3"><a href="#cb34-3" tabindex="-1"></a><span class="op">=======</span></span>
+<span id="cb34-4"><a href="#cb34-4" tabindex="-1"></a><span class="co"># pretnd there is code here!</span></span>
+<span id="cb34-5"><a href="#cb34-5" tabindex="-1"></a><span class="co"># more Python</span></span>
+<span id="cb34-6"><a href="#cb34-6" tabindex="-1"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="dv">3343</span><span class="er">f91</span></span></code></pre>
+</div>
+<p>Modify and save the file so that it reads:</p>
+<div class="codewrapper sourceCode" id="cb35">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="co"># pretend there is code here!</span></span>
+<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a><span class="co"># more Python</span></span></code></pre>
+</div>
+<p>Add the file and continue with the rebase:</p>
+<div class="codewrapper sourceCode" id="cb36">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> <span class="pp">*</span>+<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> git add plot_lfric.py</span>
+<span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a><span class="ex">[git-training-demo]:</span><span class="er">(</span><span class="ex">add_plot_script</span> +<span class="kw">|</span><span class="ex">REBASE</span> 2/3<span class="kw">)</span><span class="ex">$</span> git rebase <span class="at">--continue</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2874,10 +2893,10 @@ Successfully rebased and updated refs/heads/add_plot_script.
 </div>
 <p>We have now successfully rebased our feature branch. Our history
 shows:</p>
-<div class="codewrapper sourceCode" id="cb35">
+<div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--decorate</span> <span class="at">--oneline</span> <span class="at">--graph</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="ex">$</span> git log <span class="at">--decorate</span> <span class="at">--oneline</span> <span class="at">--graph</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2912,7 +2931,7 @@ re-attached <code>HEAD</code> to point to the new most recent commit,
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>To ensure the <code>main</code> branch of the
 <code>git-training-demo</code> repository has moved forward one commit,
@@ -2951,16 +2970,16 @@ This is what we are aiming for:</p>
 <p>Go back to your fork on GitHub and click on the <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork" class="external-link"><strong>Sync
 fork</strong></a> button. Then run <code>git pull</code> to fetch the
 changes:</p>
-<div class="codewrapper sourceCode" id="cb39">
+<div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="ex">$</span> git pull origin main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> git pull origin main</span></code></pre>
 </div>
 <p>To rebase we run:</p>
-<div class="codewrapper sourceCode" id="cb40">
+<div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="ex">$</span> git rebase main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="ex">$</span> git rebase main</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2997,26 +3016,26 @@ rebasing that no new commits were added to the remote as these will be
 lost.</li>
 </ul>
 <p>You can fetch any changes to the remote:</p>
-<div class="codewrapper sourceCode" id="cb42">
+<div class="codewrapper sourceCode" id="cb45">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> git fetch</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="ex">$</span> git fetch</span></code></pre>
 </div>
 <p>And inspect the last commit with the log or <code>git show</code> to
 make sure it’s the commit you expect:</p>
-<div class="codewrapper sourceCode" id="cb43">
+<div class="codewrapper sourceCode" id="cb46">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="ex">$</span> git show origin/add_plot_script</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="ex">$</span> git show origin/add_plot_script</span></code></pre>
 </div>
 <p>If the rebasing was successful and there have been no new commits to
 the remote feature branch by any collaborators it is safe to push the
 rebased feature branch to the GitHub remote, overwriting it’s
 history.</p>
-<div class="codewrapper sourceCode" id="cb44">
+<div class="codewrapper sourceCode" id="cb47">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--force-with-lease</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--force-with-lease</span></span></code></pre>
 </div>
 <p>The <code>--force-with-lease</code> flag will warn you if there are
 commits on the remote branch you would override by pushing if you forgot
@@ -3033,22 +3052,22 @@ to the incompatible histories of the original and the rebased
 branches.</p>
 <p>The collaborator should first switch to the local branch they want to
 overwrite with the rebased remote version:</p>
-<div class="codewrapper sourceCode" id="cb45">
+<div class="codewrapper sourceCode" id="cb48">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="ex">$</span> git switch add_plot_script</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="ex">$</span> git switch add_plot_script</span></code></pre>
 </div>
 <p>Now fetch but don’t attempt to merge the remote branch:</p>
-<div class="codewrapper sourceCode" id="cb46">
+<div class="codewrapper sourceCode" id="cb49">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="ex">$</span> git fetch origin add_plot_script</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a><span class="ex">$</span> git fetch origin add_plot_script</span></code></pre>
 </div>
 <p>Reset the local branch to match the remote origin:</p>
-<div class="codewrapper sourceCode" id="cb47">
+<div class="codewrapper sourceCode" id="cb50">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="ex">$</span> git reset <span class="at">--hard</span> origin/add_plot_script</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" tabindex="-1"></a><span class="ex">$</span> git reset <span class="at">--hard</span> origin/add_plot_script</span></code></pre>
 </div>
 <p>Now their local branch matches the rebased feature branch from GitHub
 and everyone’s branches are in sync.</p>
@@ -3071,7 +3090,7 @@ Which keyword lets you edit the commit message?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Edit the commit message:</p>
 <pre class="text"><code><span><span class="co"># r, reword &lt;commit&gt; = use commit, but edit the commit message</span></span></code></pre>
@@ -3106,7 +3125,7 @@ keywords and/or line-reordering would have given us the same result?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3210,14 +3229,14 @@ conda:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> pip install pre-commit</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3287,7 +3306,7 @@ hooks for security.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The pre-commit check for not committing to main fails so
 <code>git commit</code> wasn’t run. Your changes are still staged.</p>
