@@ -956,7 +956,7 @@ see the new commit.</p>
   Some more about remotes
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>In this episode and the previous one, our local repository has had a
 single “remote”, called <code>origin</code>. A remote is a copy of the
@@ -1367,7 +1367,7 @@ the <strong>upstream</strong> repository for you fork.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>To create the conflict at the end of the episode for all learners
 your co-instructor should follow along making the same changes the
@@ -1580,7 +1580,7 @@ you will learn how to deal with conflicts.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Practicing By Yourself </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>If you’re working through this lesson on your own, you won’t see a
 conflict. You should still follow the materials through the next episode
@@ -1986,7 +1986,7 @@ non-textual file that is stored in version control?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Let’s try it with your <code>weather</code> repository. Suppose you
 take a picture of the television forecast and call it
@@ -3021,6 +3021,37 @@ history.</p>
 <p>The <code>--force-with-lease</code> flag will warn you if there are
 commits on the remote branch you would override by pushing if you forgot
 to check yourself.</p>
+</section><section><h2 class="section-heading" id="pulling-a-rebased-branch">Pulling a Rebased Branch<a class="anchor" aria-label="anchor" href="#pulling-a-rebased-branch"></a>
+</h2>
+<hr class="half-width">
+<p>If you have rebased a feature branch and then overwritten the remote
+branch on GitHub your collaborators may need to pull these changes to
+their local copies.</p>
+<p>If the collaborator already had a copy of your branch from before the
+rebase; attempting a normal pull will result in a lot of conflicts due
+to the incompatible histories of the original and the rebased
+branches.</p>
+<p>The collaborator should first switch to the local branch they want to
+overwrite with the rebased remote version:</p>
+<div class="codewrapper sourceCode" id="cb45">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="ex">$</span> git switch add_plot_script</span></code></pre>
+</div>
+<p>Now fetch but don’t attempt to merge the remote branch:</p>
+<div class="codewrapper sourceCode" id="cb46">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="ex">$</span> git fetch origin add_plot_script</span></code></pre>
+</div>
+<p>Reset the local branch to match the remote origin:</p>
+<div class="codewrapper sourceCode" id="cb47">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="ex">$</span> git reset <span class="at">--hard</span> origin/add_plot_script</span></code></pre>
+</div>
+<p>Now their local branch matches the rebased feature branch from GitHub
+and everyone’s branches are in sync.</p>
 <div id="modifying-commit-messages" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>

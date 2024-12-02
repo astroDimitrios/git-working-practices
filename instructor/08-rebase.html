@@ -300,6 +300,7 @@
         <ul><li><a href="#tidying-your-commit-history">Tidying your Commit History</a></li>
 <li><a href="#updating-a-branch">Updating a Branch</a></li>
 <li><a href="#updating-the-remote">Updating the Remote</a></li>
+<li><a href="#pulling-a-rebased-branch">Pulling a Rebased Branch</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -906,6 +907,35 @@ history.</p>
 <p>The <code>--force-with-lease</code> flag will warn you if there are
 commits on the remote branch you would override by pushing if you forgot
 to check yourself.</p>
+</section><section><h2 class="section-heading" id="pulling-a-rebased-branch">Pulling a Rebased Branch<a class="anchor" aria-label="anchor" href="#pulling-a-rebased-branch"></a></h2>
+<hr class="half-width"><p>If you have rebased a feature branch and then overwritten the remote
+branch on GitHub your collaborators may need to pull these changes to
+their local copies.</p>
+<p>If the collaborator already had a copy of your branch from before the
+rebase; attempting a normal pull will result in a lot of conflicts due
+to the incompatible histories of the original and the rebased
+branches.</p>
+<p>The collaborator should first switch to the local branch they want to
+overwrite with the rebased remote version:</p>
+<div class="codewrapper sourceCode" id="cb45">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="ex">$</span> git switch add_plot_script</span></code></pre>
+</div>
+<p>Now fetch but don’t attempt to merge the remote branch:</p>
+<div class="codewrapper sourceCode" id="cb46">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="ex">$</span> git fetch origin add_plot_script</span></code></pre>
+</div>
+<p>Reset the local branch to match the remote origin:</p>
+<div class="codewrapper sourceCode" id="cb47">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="ex">$</span> git reset <span class="at">--hard</span> origin/add_plot_script</span></code></pre>
+</div>
+<p>Now their local branch matches the rebased feature branch from GitHub
+and everyone’s branches are in sync.</p>
 <div id="modifying-commit-messages" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
