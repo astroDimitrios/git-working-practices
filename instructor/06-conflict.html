@@ -382,7 +382,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Conflicts</h1>
-        <p>Last updated on 2024-12-03 |
+        <p>Last updated on 2025-01-09 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/06-conflict.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -571,7 +571,7 @@ a commit message to see previous commits which altered the same
 lines.</p>
 </div>
 </section><section><h2 class="section-heading" id="resolving-conflicts">Resolving Conflicts<a class="anchor" aria-label="anchor" href="#resolving-conflicts"></a></h2>
-<hr class="half-width"><p>We’re going to resolve the conflict by merging in our
+<hr class="half-width"><p>We’re going to resolve the conflict by merging in the
 <code>main</code> branch into our feature branch
 <code>7_add-citation-fitzroy</code>:</p>
 <pre class="mermaid"><code>gitGraph
@@ -584,11 +584,22 @@ lines.</p>
     commit id: 's7dja9o'
     checkout 7_add-citation-fitzroy
     merge main</code></pre>
-<p>Switch to the feature branch:</p>
+<p>First we need to make sure our fork’s <code>main</code> branch is in
+sync with the upstream repository. Navigate to your fork on GitHub and
+click on the <strong>Sync fork</strong> button.</p>
+<p>In your local copy of your fork, update the <code>main</code>
+branch:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> git switch 7_add-citation-fitzroy</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> git switch main</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre>
+</div>
+<p>Switch back to the feature branch:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">$</span> git switch 7_add-citation-fitzroy</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -596,10 +607,10 @@ lines.</p>
 <pre class="output" tabindex="0"><code>Switched to branch '7_add-citation-fitzroy'</code></pre>
 </div>
 <p>Merge in the <code>main</code> branch:</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> git merge main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">$</span> git merge main</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -610,10 +621,10 @@ Automatic merge failed; fix conflicts and then commit the result.</code></pre>
 </div>
 <p>Git is warning us about the conflict. We are still merging, if you
 run <code>git status</code> you will see:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -635,10 +646,10 @@ no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
 <code>CITATION.cff</code> file since both <code>main</code> and our
 feature branch modified this file.</p>
 <p>If we look at the <code>CITATION.cff</code> file now:</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">$</span> cat CITATION.cff</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> cat CITATION.cff</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -674,10 +685,10 @@ reconcile the changes. We can do anything we want: keep the change made
 in the local repository, keep the change made in the remote repository,
 write something new to replace both, or get rid of the change entirely.
 Let’s replace both so that the file looks like this:</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> cat CITATION.cff</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">$</span> cat CITATION.cff</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -700,11 +711,11 @@ url: "https://github.com/MetOffice/git-training-demo"</code></pre>
 </div>
 <p>To finish merging, we add <code>CITATION.cff</code> to the changes
 being made by the merge and then commit:</p>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> git add CITATION.cff </span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="ex">$</span> git add CITATION.cff </span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -717,10 +728,10 @@ Changes to be committed:
 
 	modified:   CITATION.cff</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb23">
+<div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> git commit</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="ex">$</span> git commit</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -728,10 +739,10 @@ Changes to be committed:
 <pre class="output" tabindex="0"><code>[7_add-citation-fitzroy 312c561] Merge branch 'main' into 7_add-citation-fitzroy</code></pre>
 </div>
 <p>Now we can push our changes to GitHub:</p>
-<div class="codewrapper sourceCode" id="cb25">
+<div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -799,18 +810,18 @@ non-textual file that is stored in version control?</p>
 take a picture of the television forecast and call it
 <code>forecast.jpg</code>. Jimmy has already created a feature branch to
 add the image in.</p>
-<div class="codewrapper sourceCode" id="cb27">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="ex">$</span> git switch add_forecast_image</span></code></pre>
-</div>
-<p>If you do not have an image file of forecast available, you can
-create a dummy binary file like this:</p>
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">$</span> head <span class="at">--bytes</span> 1024 /dev/urandom <span class="op">&gt;</span> forecast.jpg</span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-lh</span> forecast.jpg</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">$</span> git switch add_forecast_image</span></code></pre>
+</div>
+<p>If you do not have an image file of forecast available, you can
+create a dummy binary file like this:</p>
+<div class="codewrapper sourceCode" id="cb29">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="ex">$</span> head <span class="at">--bytes</span> 1024 /dev/urandom <span class="op">&gt;</span> forecast.jpg</span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-lh</span> forecast.jpg</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -822,11 +833,11 @@ full of random bytes read from the special file,
 <code>/dev/urandom</code>.</p>
 <p>Now, suppose you add <code>forecast.jpg</code> to your
 repository:</p>
-<div class="codewrapper sourceCode" id="cb30">
+<div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
-<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add picture of forecast"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add picture of forecast"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -839,10 +850,10 @@ repository:</p>
 is a picture of a forecast from Chile, but it is <em>also</em> called
 <code>forecast.jpg</code>. When you try to push, you get a familiar
 message:</p>
-<div class="codewrapper sourceCode" id="cb32">
+<div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="ex">$</span> git push</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -857,10 +868,10 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.</code></pre>
 </div>
 <p>We’ve learned that we must pull first and resolve any conflicts:</p>
-<div class="codewrapper sourceCode" id="cb34">
+<div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre>
 </div>
 <p>When there is a conflict on an image or other binary file, git prints
 a message like this:</p>
@@ -896,12 +907,12 @@ identifiers for the two versions of <code>forecast.jpg</code>. Our
 version is <code>HEAD</code>, and Jimmy’s version is
 <code>439dc8c0...</code>. If we want to use our version, we can use
 <code>git checkout</code>:</p>
-<div class="codewrapper sourceCode" id="cb37">
+<div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD forecast.jpg</span>
-<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
-<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use image of just the local forecast"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD forecast.jpg</span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
+<span id="cb38-3"><a href="#cb38-3" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use image of just the local forecast"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -911,12 +922,12 @@ version is <code>HEAD</code>, and Jimmy’s version is
 <p>If instead we want to use Jimmy’s version, we can use
 <code>git checkout</code> with Jimmy’s commit identifier,
 <code>439dc8c0</code>:</p>
-<div class="codewrapper sourceCode" id="cb39">
+<div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="ex">$</span> git checkout 439dc8c0 forecast.jpg</span>
-<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
-<span id="cb39-3"><a href="#cb39-3" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use image of just the local forecast"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="ex">$</span> git checkout 439dc8c0 forecast.jpg</span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a><span class="ex">$</span> git add forecast.jpg</span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use image of just the local forecast"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -927,23 +938,23 @@ version is <code>HEAD</code>, and Jimmy’s version is
 keep them under the same name. But, we can check out each version in
 succession and <em>rename</em> it, then add the renamed versions. First,
 check out each image and rename it:</p>
-<div class="codewrapper sourceCode" id="cb41">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD forecast.jpg</span>
-<span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a><span class="ex">$</span> git mv forecast.jpg forecast-only.jpg</span>
-<span id="cb41-3"><a href="#cb41-3" tabindex="-1"></a><span class="ex">$</span> git checkout 439dc8c0 forecast.jpg</span>
-<span id="cb41-4"><a href="#cb41-4" tabindex="-1"></a><span class="ex">$</span> mv forecast.jpg forecast-chile.jpg</span></code></pre>
-</div>
-<p>Then, remove the old <code>forecast.jpg</code> and add the two new
-files:</p>
 <div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> git rm forecast.jpg</span>
-<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a><span class="ex">$</span> git add forecast-only.jpg</span>
-<span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a><span class="ex">$</span> git add forecast-chile.jpg</span>
-<span id="cb42-4"><a href="#cb42-4" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use two images: local forecast and Chile forecast"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> git checkout HEAD forecast.jpg</span>
+<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a><span class="ex">$</span> git mv forecast.jpg forecast-only.jpg</span>
+<span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a><span class="ex">$</span> git checkout 439dc8c0 forecast.jpg</span>
+<span id="cb42-4"><a href="#cb42-4" tabindex="-1"></a><span class="ex">$</span> mv forecast.jpg forecast-chile.jpg</span></code></pre>
+</div>
+<p>Then, remove the old <code>forecast.jpg</code> and add the two new
+files:</p>
+<div class="codewrapper sourceCode" id="cb43">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="ex">$</span> git rm forecast.jpg</span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a><span class="ex">$</span> git add forecast-only.jpg</span>
+<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a><span class="ex">$</span> git add forecast-chile.jpg</span>
+<span id="cb43-4"><a href="#cb43-4" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Use two images: local forecast and Chile forecast"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1032,7 +1043,7 @@ resolved.</li>
   "url": "https://metoffice.github.io/git-working-practices/instructor/06-conflict.html",
   "identifier": "https://metoffice.github.io/git-working-practices/instructor/06-conflict.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2024-12-03",
+  "dateModified": "2025-01-09",
   "datePublished": "2025-01-09"
 }
 
