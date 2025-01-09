@@ -526,7 +526,7 @@ refresh your browser to see the new branch.</p>
   fatal: no upstream branch
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>If you see a message similar to the following:</p>
 <div class="codewrapper">
@@ -563,7 +563,7 @@ push from a new branch.</p>
   Some more about remotes
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>In this episode and in the git-novice lesson, our local repository
 only had a single “remote”, called <code>origin</code>. A remote is a
@@ -667,6 +667,22 @@ we marked as complete.</p>
 merging. All checks have passed, this repository has automatic checks
 for trailing whitespace, accidentally adding large files etc. More
 information can be found in the optional episode on <a href="./09-pre-commit.html">pre-commit hooks</a>.</p>
+<div id="help-some-checks-have-failed" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<div id="help-some-checks-have-failed" class="callout-inner">
+<h3 class="callout-title">Help: Some checks have failed</h3>
+<div class="callout-content">
+<p>If your now open Pull Request says some checks have failed this is
+because your changes did not pass the automatic pre-commit checks.</p>
+<p>Click on the <strong>Details</strong> link next to the failed test
+and fix your code on your local repository. Commit and then push this
+fix to GitHub. Your PR will automatically update and re-run the tests,
+you may need to refresh the page.</p>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="automatically-closing-issues-via-prs">Automatically closing Issues via PRs<a class="anchor" aria-label="anchor" href="#automatically-closing-issues-via-prs"></a></h3>
 <p>A PR can automatically close an Issue when it is merged into

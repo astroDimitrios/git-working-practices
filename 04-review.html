@@ -444,11 +444,12 @@ popup and hover next to a line number until it becomes highlighted.
 Click on the line to add an inline comment:</p>
 <figure><img src="fig/pr-4.png" alt="A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment." class="figure mx-auto d-block"></figure><p>You can make suggested changes using inline comments. Click on the
 file icon or press <kbd>Ctrl+g</kbd>:</p>
-<figure><img src="fig/pr-suggestion.png" alt="A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment with a suggestion." class="figure mx-auto d-block"></figure><p>Click on the green <strong>Start a review</strong> button. Now click
-on the green button in the top right which says <strong>Finish your
-review</strong> or <strong>Review Changes</strong>, add a comment, and
-select <strong>Request changes</strong>. When you’re finished click the
-green <strong>Submit review</strong> button.</p>
+<figure><img src="fig/pr-suggestion.png" alt="A screenshot of a PR showing the diff in the Files changed tab. A line has been highlighted to show how to add an inline comment with a suggestion." class="figure mx-auto d-block"></figure><p>Add in a suggested change for your review. Click on the green
+<strong>Start a review</strong> button. Now click on the green button in
+the top right which says <strong>Finish your review</strong> or
+<strong>Review Changes</strong>, add a comment, and select
+<strong>Request changes</strong>. When you’re finished click the green
+<strong>Submit review</strong> button.</p>
 <figure><img src="fig/pr-suggestion-2.png" alt="A screenshot of a PR showing the diff in the Files changed tab showing the review popup." class="figure mx-auto d-block"></figure><p>The PRs <strong>Conversation</strong> tab now looks like this:</p>
 <figure><img src="fig/pr-review-1.png" alt="A screenshot of a PR showing the Conversation tab with a review that has requested changes." class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="responding-to-review">Responding to Review<a class="anchor" aria-label="anchor" href="#responding-to-review"></a></h2>
 <hr class="half-width"><p>Now you will respond to the review on the PR that you opened.</p>
@@ -462,6 +463,22 @@ branch using your local copy, pushed the changes to GitHub and then
 marked the conversation with the suggested change as resolved.</p>
 <p>Re-request a review by clicking on the two arrows forming a circle
 next to the reviewers name at the top of the PR.</p>
+<div id="help-some-checks-have-failed" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<div id="help-some-checks-have-failed" class="callout-inner">
+<h3 class="callout-title">Help: Some checks have failed</h3>
+<div class="callout-content">
+<p>Since our PR is running automatic checks it’s best not to make large
+changes by accepting suggestions this way. Instead make changes to your
+feature branch using your local copy, run the <a href="09-pre-commit.html">checks locally</a>, push the changes to GitHub
+and then mark the conversations with the suggested changes as resolved.
+You can add a commit hash in the conversation which will automatically
+link to the commit responding to any review comments.</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="approving-changes">Approving Changes<a class="anchor" aria-label="anchor" href="#approving-changes"></a></h2>
 <hr class="half-width"><p>Head back to your partners PR, if they re-requested a review you will
 have received another notification.</p>
