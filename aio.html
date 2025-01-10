@@ -1477,7 +1477,7 @@ repository</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Update your local copy of the <code>git-training-demo</code>
@@ -1872,7 +1872,7 @@ Documentation</a> has more information on linking PRs to Issues.<a href="#fnref2
 </ol>
 </div></section><section id="aio-06-conflict"><p>Content from <a href="06-conflict.html">Conflicts</a></p>
 <hr>
-<p>Last updated on 2025-01-09 |
+<p>Last updated on 2025-01-10 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/06-conflict.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2040,8 +2040,28 @@ in the Code viewer. Click on the <strong>Blame</strong> button:</p>
 <code>forecast.md</code> file. The far left shows how long ago the
 commit was that changed those lines. Then the commit message is
 displayed before the file contents. Click on the little page icon after
-a commit message to see previous commits which altered the same
-lines.</p>
+a commit message to see previous commits which altered the same lines.
+Try using blame on the <code>CITATION.cff</code> file to see who added
+the conflicting change.</p>
+</div>
+<div class="section level3">
+<h3 id="compare-changes">Compare changes<a class="anchor" aria-label="anchor" href="#compare-changes"></a>
+</h3>
+<p>In the git-novice lesson we learnt how to diff between commits on the
+same branch. You can also look at diffs between branches even if they
+are on a different fork using GitHub.</p>
+<p>To see a difference for a repository add <code>/compare</code> to the
+end of the repository url.</p>
+<ol style="list-style-type: decimal">
+<li>Navigate to: <a href="https://github.com/MetOffice/git-training-demo/compare/" class="external-link"><code>https://github.com/MetOffice/git-training-demo/compare/</code></a>,
+and click on the <strong>compare across forks</strong> link.</li>
+<li>Click on the <strong>head repository</strong> dropdown and find your
+fork.</li>
+<li>Click on the <strong>compare</strong> dropdown and select your
+feature branch.</li>
+</ol>
+<p>A diff should appear comparing your fork’s feature branch with the
+upstream repositories <code>main</code> branch.</p>
 </div>
 </section><section><h2 class="section-heading" id="resolving-conflicts">Resolving Conflicts<a class="anchor" aria-label="anchor" href="#resolving-conflicts"></a>
 </h2>
@@ -3515,14 +3535,14 @@ conda:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> pip install pre-commit</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3592,7 +3612,7 @@ hooks for security.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The pre-commit check for not committing to main fails so
 <code>git commit</code> wasn’t run. Your changes are still staged.</p>
@@ -3705,8 +3725,8 @@ Changes to be committed:
   "url": "https://metoffice.github.io/git-working-practices/aio.html",
   "identifier": "https://metoffice.github.io/git-working-practices/aio.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2025-01-09",
-  "datePublished": "2025-01-09"
+  "dateModified": "2025-01-10",
+  "datePublished": "2025-01-10"
 }
 
   </script><script>
