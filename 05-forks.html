@@ -275,6 +275,7 @@
 <li><a href="#make-changes">Make Changes</a></li>
 <li><a href="#open-a-pull-request">Open a Pull Request</a></li>
 <li><a href="#updating-a-fork">Updating a Fork</a></li>
+<li><a href="#summary-diagram">Summary Diagram</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -384,7 +385,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Forks</h1>
-        <p>Last updated on 2025-01-09 |
+        <p>Last updated on 2025-01-10 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/05-forks.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -645,6 +646,55 @@ syncing your fork this way run <code>git pull</code> on your local
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="summary-diagram">Summary Diagram<a class="anchor" aria-label="anchor" href="#summary-diagram"></a></h2>
+<hr class="half-width"><p>The workflow for forking is similar to that for branching. There are
+only a few differences after you’ve set up your fork for the first
+time:</p>
+<ul><li>You should open Issues on the upstream repository not your
+fork.</li>
+<li>After merging in a PR on the upstream repository you need the added
+step of syncing your forks <code>main</code> branch.</li>
+</ul><pre class="mermaid"><code>sequenceDiagram
+    accDescr {A sequence diagram showing the steps for using
+    Forks with the branching model.}
+    autonumber
+    participant UM as upstream main
+    participant GHM as origin main
+    participant GHF as origin feature
+    participant M as main
+    UM -&gt;&gt; UM: #f
+    Note over UM: Open an Issue for the change
+    UM --&gt;&gt; GHM: #f
+    Note right of UM: First time: Fork the repository
+    GHM --&gt;&gt; M: #f
+    Note right of GHM: First time: git clone&lt;br/&gt;Then: git pull
+    create participant F as feature
+    M -&gt;&gt; F: Create a feature branch:&lt;br/&gt;git switch -c feature
+    loop
+        F -&gt;&gt; F: #f
+        Note over F: Develop changes:&lt;br/&gt;git add&lt;br/&gt;git commit
+    end
+    F --&gt;&gt; GHF: #f
+    Note left of F: Push to GitHub: git push&lt;br/&gt;The first push creates origin feature!
+    destroy GHF
+    GHF --&gt;&gt; UM: #f
+    Note left of GHF: Pull Request and then Merge.&lt;br/&gt;Delete origin feature branch.
+    UM --&gt;&gt; GHM: #f
+    Note right of UM: Sync your fork
+    GHM --&gt;&gt; M: #f
+    Note right of GHM: git pull
+    Note over F: Delete branch:&lt;br/&gt;git branch -d feature
+    box Upstream Remote - GitHub
+    participant UM
+    end
+    box Fork Remote - GitHub
+    participant GHM
+    participant GHF
+    end
+    box Fork - Local
+    participant M
+    participant F
+    end</code></pre>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -727,7 +777,7 @@ Documentation</a> has more information on linking PRs to Issues.<a href="#fnref2
   "url": "https://metoffice.github.io/git-working-practices/05-forks.html",
   "identifier": "https://metoffice.github.io/git-working-practices/05-forks.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2025-01-09",
+  "dateModified": "2025-01-10",
   "datePublished": "2025-01-10"
 }
 

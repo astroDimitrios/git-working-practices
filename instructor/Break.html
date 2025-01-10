@@ -373,7 +373,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Break</h1>
-        <p>Last updated on 2025-01-09 |
+        <p>Last updated on 2025-01-10 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/Break.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -393,11 +393,41 @@
 <li>Create a branch to develop your changes on</li>
 <li>Make changes to your working copy</li>
 <li>Open a Pull Request</li>
-<li>Review changes</li>
 <li>Respond to review</li>
-<li>Merge the Pull Request and close the Issue</li>
-<li>Tidy up your branches</li>
-</ol><p>Take a break - get up and move about.</p>
+<li>Update your local copy and tidy up your branches</li>
+</ol><pre class="mermaid"><code>sequenceDiagram
+    accDescr {A sequence diagram showing the steps for the branching model.}
+    autonumber
+    participant GHM as origin main
+    participant GHF as origin feature
+    participant M as main
+    GHM --&gt;&gt; GHM: #f
+    Note over GHM: Open an Issue for the change
+    GHM --&gt;&gt; M: #f
+    Note right of GHM: First time: git clone&lt;br/&gt;Then: git pull
+    create participant F as feature
+    M -&gt;&gt; F: Create a feature branch:&lt;br/&gt;git switch -c feature
+    loop
+        F -&gt;&gt; F: #f
+        Note over F: Develop changes:&lt;br/&gt;git add&lt;br/&gt;git commit
+    end
+    F --&gt;&gt; GHF: #f
+    Note left of F: Push to GitHub: git push&lt;br/&gt;The first push creates origin feature!
+    destroy GHF
+    GHF -&gt;&gt; GHM: #f
+    Note left of GHF: Pull Request and then Merge.&lt;br/&gt;Delete origin feature branch.
+    GHM --&gt;&gt; M: #f
+    Note right of GHM: git pull
+    Note over F: Delete branch:&lt;br/&gt;git branch -D feature
+    box GitHub Remote
+    participant GHM
+    participant GHF
+    end
+    box Local
+    participant M
+    participant F
+    end</code></pre>
+<p>Take a break - get up and move about.</p>
 
 
 
@@ -459,7 +489,7 @@
   "url": "https://metoffice.github.io/git-working-practices/instructor/Break.html",
   "identifier": "https://metoffice.github.io/git-working-practices/instructor/Break.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2025-01-09",
+  "dateModified": "2025-01-10",
   "datePublished": "2025-01-10"
 }
 

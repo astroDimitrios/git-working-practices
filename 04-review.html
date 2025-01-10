@@ -382,7 +382,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Review</h1>
-        <p>Last updated on 2025-01-09 |
+        <p>Last updated on 2025-01-10 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/04-review.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -418,10 +418,31 @@
 </div>
 </div>
 <p>In this section we will explore how to properly review code and
-suggest changes if necessary. Make sure you know who is in your pair.
-Find your colleagues open PR on the <code>git-training-demo</code>
-repository using the Pull Requests tab or find the request for review in
-your notifications.</p>
+suggest changes if necessary. Both science and code reviews happen in a
+Pull Request. The general process is outlined in the diagram below:</p>
+<pre class="mermaid"><code>sequenceDiagram
+   accDescr {A sequence diagram showing the process of reviewing.}
+   autonumber
+   actor Developer
+   actor Reviewer
+
+   Developer-&gt;&gt;Reviewer: Request a reviewer
+   Reviewer-&gt;&gt;Reviewer: #32;
+   Note over Reviewer: Add the reviewer&lt;br/&gt;to the pull request
+   Reviewer-&gt;&gt;Reviewer: #32;
+   Note over Reviewer: Perform the review
+   loop
+      Reviewer-&gt;&gt;Developer: Submit the review
+      Developer-&gt;&gt;Developer: #32;
+      Note over Developer: Respond to each&lt;br/&gt;review comment
+      Developer-&gt;&gt;Reviewer: Re-request a review
+      Reviewer-&gt;&gt;Reviewer: #32;
+      Note over Reviewer: Respond to each review&lt;br/&gt;comment response
+   end
+   Reviewer-&gt;&gt;Developer: Approve the pull request</code></pre>
+<p>Make sure you know who is in your pair. Find your colleagues open PR
+on the <code>git-training-demo</code> repository using the Pull Requests
+tab or find the request for review in your notifications.</p>
 <section><h2 class="section-heading" id="reviewing-changes">Reviewing Changes<a class="anchor" aria-label="anchor" href="#reviewing-changes"></a></h2>
 <hr class="half-width"><p>You can add general science and code review comments in the
 <strong>Conversation</strong> tab. To review specific files go to the
@@ -545,15 +566,15 @@ repository</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Update your local copy of the <code>git-training-demo</code>
 repository</li>
-</ol><div class="codewrapper sourceCode" id="cb1">
+</ol><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> git switch main</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">$</span> git switch main</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="ex">$</span> git pull</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -572,10 +593,10 @@ Fast-forward
  create mode 100644 cloud-mo-fitzroy.md</code></pre>
 </div>
 <ol start="2" style="list-style-type: decimal"><li>Delete any branches that are no longer necessary</li>
-</ol><div class="codewrapper sourceCode" id="cb3">
+</ol><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> git remote prune origin</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> git remote prune origin</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -584,10 +605,10 @@ Fast-forward
 URL: git@github.com:metoffice/git-training-demo.git
  * [pruned] origin/1_favourite_cloud</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> git branch <span class="at">-D</span> 1_favourite_cloud</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">$</span> git branch <span class="at">-D</span> 1_favourite_cloud</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -674,7 +695,7 @@ changed</strong> tab using the diff.</li>
   "url": "https://metoffice.github.io/git-working-practices/04-review.html",
   "identifier": "https://metoffice.github.io/git-working-practices/04-review.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2025-01-09",
+  "dateModified": "2025-01-10",
   "datePublished": "2025-01-10"
 }
 
