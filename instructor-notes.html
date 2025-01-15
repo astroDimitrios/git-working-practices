@@ -442,10 +442,54 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Instructor Notes</h1>
         
-<section><h2 class="section-heading" id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
+
+<section><h2 class="section-heading" id="general-notes">General Notes<a class="anchor" aria-label="anchor" href="#general-notes"></a>
 </h2>
 <hr class="half-width">
-<p>To setup this lesson you will need to create a
+<p>General notes for each section are below:</p>
+<div class="section level3">
+<h3 id="setup">
+<a href="index.html#setup">Setup</a><a class="anchor" aria-label="anchor" href="#setup"></a>
+</h3>
+<p>Below are setup steps instructors need to complete before the
+workshop.</p>
+<div class="section level4">
+<h4 id="github-usernames">GitHub Usernames<a class="anchor" aria-label="anchor" href="#github-usernames"></a>
+</h4>
+<p>You should collect GitHub usernames from learners beforehand either
+using the sign-up form or by emailing learners separately the week
+before. Sort the learners into pairs before the workshop. They need to
+be in pairs to review each others PRs in <a href="04-review.html">Episode 5 Review</a>.</p>
+<p>In <a href="00-repo-access.html">Episode 1</a> you will demonstrate
+how to give access to a repository by adding these users to the
+<code>git-training-demo</code> repository. If there are many external
+learners from partner institutions you may wish to give some learners
+<strong>write</strong> access to the <code>git-training-demo</code>
+repository before the lesson to save time.</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="git-training-demo-repository">
+<code>git-training-demo</code> Repository<a class="anchor" aria-label="anchor" href="#git-training-demo-repository"></a>
+</h3>
+<div id="met-office" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="met-office" class="callout-inner">
+<h3 class="callout-title">Met Office</h3>
+<div class="callout-content">
+<p>Met Office instructors will find that the
+<code>git-training-demo</code> repository has already been set up for
+you. If for any reason you need to create a new repository you can do so
+by creating a new repository from the
+<code>git-training-demo-template</code> template repository (you will
+still need to setup the rule in step 8 below), or by following all the
+steps below.</p>
+</div>
+</div>
+</div>
+<p>To setup the repository for this lesson you will need to create the
 <code>git-training-demo</code> repository using the <a href="data/git-training-demo.zip">zipped directory</a> we provide.</p>
 <ol style="list-style-type: decimal">
 <li>Download the <a href="data/git-training-demo.zip">zipped
@@ -458,17 +502,206 @@ is correct for your organisation.</li>
 <li>Create an empty GitHub repo with the name
 <code>git-training-demo</code>.</li>
 <li>Link your local repo to the remote and push all changes.</li>
-<li>Setup a rule to require a PR before merging with
-<code>main</code>.</li>
+<li>Setup a rule to require a PR before merging with <code>main</code>.
+Allow admins to bypass this rule.</li>
 </ol>
-<p>Pay particular attention to the instructor callouts in episodes <a href="05-forks.html">05</a> and <a href="08-rebase.html">08</a> which
-outline how to create the conflicts the learners will have to
-resolve.</p>
+<p>The last step is to create a new milestone on the repository with the
+name: <strong>Git &amp; GitHub WP INSERT_DATE</strong>.</p>
+</div>
+<div class="section level3">
+<h3 id="github-project">GitHub Project<a class="anchor" aria-label="anchor" href="#github-project"></a>
+</h3>
+<div id="met-office-1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="met-office-1" class="callout-inner">
+<h3 class="callout-title">Met Office</h3>
+<div class="callout-content">
+<p>Met Office instructors will find that the <strong>Git &amp; GitHub
+WP</strong> Project has already been setup for them. Instructors just
+need to ensure that all learners are either in the
+<code>git-and-github-training</code> Met Office GitHub team or have been
+given read access if they are external to the organisation.</p>
+</div>
+</div>
+</div>
 <p>You will need to create a GitHub Project for learners to link Issues
 they create on the <code>git-training-demo</code> repository to. You can
-name this Project: <strong>Git &amp; GitHub WP INSERT_DATE</strong></p>
-<p>The last step is to create a new milestone on the repository with an
-identical or similar name to the Project name.</p>
+name this Project <strong>Git &amp; GitHub WP</strong>. Give the
+<code>git-and-github-training</code> team permissions on the GitHub
+Project.</p>
+</div>
+<div class="section level3">
+<h3 id="introduction">
+<a href="index.html">Introduction</a><a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h3>
+<p>Use the following text as a guide for your intro, show the web notes
+as you introducing the workshop.</p>
+<p>How do you use Git and GitHub to collaborate? This course will guide
+learners through two common workflows used to collaborate on code with
+GitHub. It will introduce you to all sorts of neat features like GitHub
+projects for team management and automatic code review testing. By the
+end of the workshop you’ll have the knowledge you need to decide which
+working practices are right for you and your team. Some things we’ll be
+thinking about:</p>
+<ul>
+<li>Who do I need to give repo access to? How do I do it?</li>
+<li>How do you do a full code review on GitHub?</li>
+<li>What do all the merge options mean?</li>
+<li>Do we merge main (trunk) into our feature branches?</li>
+<li>Who presses the merge button?</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="repository-access">
+<a href="00-repo-access.html">Repository Access</a><a class="anchor" aria-label="anchor" href="#repository-access"></a>
+</h3>
+<p>At the start of this episode you will demonstrate how to give
+collaborators access to the <code>git-training-demo</code> repository.
+Give <strong>write</strong> access to:</p>
+<ul>
+<li>The <code>git-and-github-training</code> team (which will include
+all Met Office colleagues).</li>
+<li>Add partners individually.</li>
+</ul>
+<p>Later on in the workshop before the episode on forking you will
+reduce learners permissions to <strong>triage</strong>.</p>
+</div>
+<div class="section level3">
+<h3 id="issues">
+<a href="01-issues.html">Issues</a><a class="anchor" aria-label="anchor" href="#issues"></a>
+</h3>
+<p>This section is relatively simple - open an Issue to add a file with
+your favourite cloud.</p>
+<ul>
+<li>Add a milestone, project, and assign yourself to the Issue.</li>
+<li>It would be good to have an image of a cloud to drag and drop in the
+Issue to demonstrate this functionality.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="branching-models">
+<a href="02-branching.html">Branching Models</a><a class="anchor" aria-label="anchor" href="#branching-models"></a>
+</h3>
+<p>There is nothing in this episode for learners to do so keep it short
+and snappy.</p>
+<ul>
+<li>Highlight that in the intro lesson learners used the feature branch
+workflow.</li>
+<li>Mention the links at the end of the episode which have much more
+detail on other models.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="feature-branch-model">
+<a href="03-feature-branch.html">Feature Branch Model</a><a class="anchor" aria-label="anchor" href="#feature-branch-model"></a>
+</h3>
+<p>Learners will not have cloned a repository before! PR templates and
+automatically closing PRs are also new. <strong>When the PR is opened
+they should assign the other learner in their pair as the
+reviewer</strong>.</p>
+<p>There is a chance their changes fail the PR checks. Point out that
+they may have failed, show the PR page and see if any have red cross
+next to them. Explain briefly that we use automated PR checks using
+pre-commit and there is an <a href="09-pre-commit.html">optional
+episode</a> at the end of the lesson on how to use these. You may need
+to help learners fix their change locally and push a new commit so these
+checks pass. If you take a 10 minute or longer break at the end of the
+episode you can help those learners whose tests failed during the
+break.</p>
+</div>
+<div class="section level3">
+<h3 id="review">
+<a href="04-review.html">Review</a><a class="anchor" aria-label="anchor" href="#review"></a>
+</h3>
+<p>It’s important that learners make a suggestion on their partners PR,
+it doesn’t matter what that suggestion is.</p>
+<p>The 2 instructors will need to swap part way through this
+episode.</p>
+<div class="section level4">
+<h4 id="reviewing-changes">Reviewing Changes<a class="anchor" aria-label="anchor" href="#reviewing-changes"></a>
+</h4>
+<p>In this section the first instructor should review the PR opened by
+the second instructor.</p>
+</div>
+<div class="section level4">
+<h4 id="responding-to-review">Responding to Review<a class="anchor" aria-label="anchor" href="#responding-to-review"></a>
+</h4>
+<p>In this section the second instructor should respond to the review,
+sharing their screen. They can change their GitHub theme so that the 2
+instructors GitHub pages look visually distinct, this makes it clearer
+whether we are watching the reviewer or the developer.</p>
+</div>
+<div class="section level4">
+<h4 id="approving-changes">Approving Changes<a class="anchor" aria-label="anchor" href="#approving-changes"></a>
+</h4>
+<p>Swap back to the first instructor so they can approve the changes.
+Make sure you cover the content in the <strong>WHO PRESSES THE MERGE
+BUTTON?</strong> callout. Give learners a break and the opportunity to
+complete the yellow challenge <strong>Local Cleanup</strong>.</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="break">
+<a href="Break.html">Break</a><a class="anchor" aria-label="anchor" href="#break"></a>
+</h3>
+<p>Remember to take regular breaks.</p>
+</div>
+<div class="section level3">
+<h3 id="forks">
+<a href="05-forks.html">Forks</a><a class="anchor" aria-label="anchor" href="#forks"></a>
+</h3>
+<p>You can choose here to either change everyone’s permissions down to
+<strong>triage</strong>:</p>
+<ul>
+<li>during the break before the episode.</li>
+<li>at the start of the episode to remind learners again how to change
+permissions.</li>
+</ul>
+<p>Please showcase fully, as described in the episode, how to sync your
+fork via the command line. They will use the handy GitHub button
+later.</p>
+</div>
+<div class="section level3">
+<h3 id="conflicts">
+<a href="06-conflict.html">Conflicts</a><a class="anchor" aria-label="anchor" href="#conflicts"></a>
+</h3>
+<p>The most important thing to remember here is the second instructor
+<strong>MUST</strong> have opened a PR just like the learners are doing
+and merge this after opening (and after learners have updated their
+<code>main</code> branches and created their feature branches). They can
+bypass protections and do this while the first instructor is teaching.
+This generates the citation file conflict the first instructor will
+point out.</p>
+</div>
+<div class="section level3">
+<h3 id="history">
+<a href="07-history.html">History</a><a class="anchor" aria-label="anchor" href="#history"></a>
+</h3>
+<p>Users will have covered using <code>git log</code> in the intro
+lesson. Show learners what the history of the repository looks like now.
+Then walk through the merge options, keep it short and snappy. There are
+no learner exercises in this episode, make sure you ask learners what
+questions they have at the end.</p>
+</div>
+<div class="section level3">
+<h3 id="end">
+<a href="End.html">End</a><a class="anchor" aria-label="anchor" href="#end"></a>
+</h3>
+<p>What questions do the learners still have? If there is time then
+maybe with a vote decide what to briefly look at:</p>
+<ul>
+<li>Actions</li>
+<li>pre-commit</li>
+<li>Rebasing</li>
+</ul>
+</div>
+</section><section><h2 class="section-heading" id="notes-from-within-episodes">Notes from within Episodes<a class="anchor" aria-label="anchor" href="#notes-from-within-episodes"></a>
+</h2>
+<hr class="half-width">
+<p>The following notes are stored within the episode webpages and are
+extracted here for completeness:</p>
 </section><section id="aggregate-instructor-notes"></section>
 </div>
     </main>
@@ -517,8 +750,8 @@ identical or similar name to the Project name.</p>
   "url": "https://metoffice.github.io/git-working-practices/instructor-notes.html",
   "identifier": "https://metoffice.github.io/git-working-practices/instructor-notes.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2025-01-14",
-  "datePublished": "2025-01-14"
+  "dateModified": "2025-01-15",
+  "datePublished": "2025-01-15"
 }
 
   </script><script>
