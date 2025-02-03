@@ -23,6 +23,10 @@ a piece of software on both our laptop and a server in the lab, we could make
 different changes to each copy. Version control helps us manage these
 [conflicts](../learners/reference.md#conflict) by giving us tools to
 [resolve](../learners/reference.md#resolve) overlapping changes.
+You will encounter conflicts no matter which branching model you choose.
+No model is more or less likely to produce conflicts.
+No model will make conflicts easier (or harder) to resolve.
+Using forks has no impact on how likely conflicts are to occur.
 
 ::::::::::::::::::::::::::::::::::::: instructor
 
