@@ -73,8 +73,17 @@ $ cat cloud-mo-fitzroy.md
 ```output
 # My Favourite Cloud
 
-Light and fluffy cumulus.
+Light and fluffy cumulus.    
 ```
+
+::: caution
+
+## Add in whitespace!
+
+To demonstrate automated testing via GitHub,
+add some spaces to the end of a line in your file.
+
+:::
 
 Add and commit your changes:
 
@@ -186,7 +195,6 @@ associated with a repository. Here are some of the most useful ones:
 - `git remote rename [oldname] [newname]` changes the local alias by which a remote
   is known - its name. For example, one could use this to change `upstream` to `mo-fitzroy`.
   
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Open a PR
@@ -241,7 +249,7 @@ In the description scroll down to the checklists
 which look like this:
 
 ```md
-- [ ] I have read `CONTRIBUTING.md` and added my name as a Code Contributor.
+- [ ] I have read `CONTRIBUTING.md`.
 ```
 
 Some open source projects require you to add your name
@@ -251,45 +259,33 @@ Replace the space in the square checkbox brackets with an `x`
 to mark the task as complete:
 
 ```md
-- [x] I have read `CONTRIBUTING.md` and added my name as a Code Contributor.
+- [x] I have read `CONTRIBUTING.md`.
 ```
 
 Now when you open the PR it should look something like this:
 
 ![](fig/github-fork-pr-1.jpeg){alt='A screenshot of a users  pull request from their fork back to the upstream git-training-demo repository.'}
 
-This image shows PR number `#8`.
-This PR will close/fix Issue number `#7` (the top left arrow).
+This image shows PR number `#2`.
+This PR will close/fix Issue number `#1` (the top left arrow).
 You can request a review on the top right.
 Some repositories will be set up to automatically assign
 a reviewer based on how many reviews each team member
 currently has open[^auto-assign-pr-review].
+The middle arrow is where you assign yourself to the PR.
 The bottom arrow shows the checklist items we marked as complete.
 
 At the bottom of your PR you can see that a review is required
-before merging.
-All checks have passed, this repository has automatic checks
+before merging and some checks were not successful.
+This repository has automatic checks
 for trailing whitespace, accidentally adding large files etc.
-More information can be found in the optional episode on
+More information on setting up these checks
+can be found in the optional episode on
 [pre-commit hooks](./09-pre-commit.md).
 
-::: caution
+::: callout
 
-## Help: Some checks have failed
-
-If your now open Pull Request says some checks have failed
-this is because your changes did not pass the automatic
-pre-commit checks.
-
-Click on the **Details** link next to the failed test
-and fix your code on your local repository.
-Commit and then push this fix to GitHub.
-Your PR will automatically update and re-run the tests,
-you may need to refresh the page.
-
-:::
-
-### Automatically closing Issues via PRs
+## Automatically closing Issues via PRs
 
 A PR can automatically close an Issue when it is merged into `main`.
 To use this GitHub functionality
@@ -309,8 +305,61 @@ Make sure you change `1` to your Issue number.
 The [GitHub Documentation](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue) has more information
 on linking PRs to Issues.
 
+:::
+
+## Fixing Failing Checks
+
+Your changes did not pass the automatic pre-commit checks.
+The quickest way to check why a test failed is to click on
+the **Pull request checks / pre-commit** link near the bottom
+of the PR.
+Or you can navigate to the **Checks** tab in the PR,
+then select **Pull request checks** and click on the failing test.
+
+![](fig/pre-commit-check-fail-1.png){alt='A screenshot of a users failing pre-commit check showing the whitespace test has failed.'}
+
+You can see in the test output trailing whitespace has been found.
+This caused the tests to fail.
+Lower down in the output you will see the filename,
+and a diff of the line with the whitespace.
+
+Go back to your local repository and remove the whitespace:
+
+```bash
+$ nano cloud-mo-fitzroy.md
+$ cat cloud-mo-fitzroy.md
+```
+
+```output
+# My Favourite Cloud
+
+Light and fluffy cumulus.
+```
+
+Add and commit your changes:
+
+```bash
+$ git add cloud-mo-fitzroy.md
+$ git commit -m "Removes whitespace"
+```
+
+```output
+[1_favourite_cloud c74c7e1] Removes whitespace
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+Push these changes to GitHub:
+
+```bash
+$ git push
+```
+
+Navigate back to your PR.
+You should now see a message saying all checks have passed.
+Merging is still blocked until a colleague reviews our code.
+
 In the next episode we will look at how these changes
-are reviewed and merged back into `main` in more detail.
+are reviewed and merged back into `main`.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
