@@ -207,6 +207,9 @@ watching the reviewer or the developer.
 Swap back to the first instructor so they can approve the changes.
 Make sure you cover the content in the
 **WHO PRESSES THE MERGE BUTTON?** callout.
+Learners can use any merge strategy here, you will use this as
+an opportunity to see the history in the next episode
+and suggest sticking to one.
 Give learners a break and the opportunity to complete
 the yellow challenge **Local Cleanup**.
 
