@@ -112,10 +112,10 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 357 bytes | 178.00 KiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-remote: 
+remote:
 remote: Create a pull request for '1_favourite_cloud' on GitHub by visiting:
 remote:      https://github.com/MetOffice/git-training-demo/pull/new/1_favourite_cloud
-remote: 
+remote:
 To github.com:metoffice/git-training-demo.git
  * [new branch]      1_favourite_cloud -> 1_favourite_cloud
 branch '1_favourite_cloud' set up to track 'origin/1_favourite_cloud'.
@@ -264,7 +264,7 @@ to mark the task as complete:
 
 Now when you open the PR it should look something like this:
 
-![](fig/github-fork-pr-1.jpeg){alt='A screenshot of a users  pull request from their fork back to the upstream git-training-demo repository.'}
+![](fig/github-fork-pr-1.png){alt='A screenshot of a users  pull request from their fork back to the upstream git-training-demo repository.'}
 
 This image shows PR number `#2`.
 This PR will close/fix Issue number `#1` (the top left arrow).
@@ -374,7 +374,7 @@ On the right hand side of the PR you can also:
 2. Add labels to the PR.
 3. Add the PR to a Project by clicking on the cog
 next to the Projects section. (If you don't see a project
-related to the training you might not have been granted permissions, 
+related to the training you might not have been granted permissions,
 ask your instructors for help)
 4. Assign the PR to a milestone.
 
