@@ -103,7 +103,8 @@ When you're finished click the green **Submit review** button.
 
 ![](fig/pr-suggestion-2.png){alt='A screenshot of a PR showing the diff in the Files changed tab showing the review popup.'}
 
-The PRs **Conversation** tab now looks like this:
+The PRs **Conversation** tab now looks like this
+towards the bottom of the page:
 
 ![](fig/pr-review-1.png){alt='A screenshot of a PR showing the Conversation tab with a review that has requested changes.'}
 
