@@ -103,7 +103,8 @@ When you're finished click the green **Submit review** button.
 
 ![](fig/pr-suggestion-2.png){alt='A screenshot of a PR showing the diff in the Files changed tab showing the review popup.'}
 
-The PRs **Conversation** tab now looks like this:
+The PRs **Conversation** tab now looks like this
+towards the bottom of the page:
 
 ![](fig/pr-review-1.png){alt='A screenshot of a PR showing the Conversation tab with a review that has requested changes.'}
 
@@ -163,7 +164,7 @@ you can approve the PR:
 Swap back to the Conversations tab.
 The PR is now ready to merge and has no conflicts with the
 base (`main` in this case) branch.
-Click **Squash and merge**; don't forget to move the PR
+Click any of the 3 merge options; don't forget to move the PR
 number to the start of the commit message like you did
 in the Version Control with Git lesson:
 
@@ -266,6 +267,18 @@ Deleted branch 1_favourite_cloud (was b7f26e6).
 ```
 
 :::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## How was your PR merged?
+
+In this episode you merged each others PRs.
+The reviewer used a random merge strategy to merge each PR.
+
+Explore the history of the repository with `git log` and find your PR merge.
+How has the chosen merge strategy affected the repositories history?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
