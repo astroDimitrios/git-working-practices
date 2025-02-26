@@ -318,7 +318,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="05-forks.html">7. Forks</a>
+        <a href="07-history.html">7. History</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -330,7 +330,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="06-conflict.html">8. Conflicts</a>
+        <a href="05-forks.html">8. Forks</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -342,7 +342,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="07-history.html">9. History</a>
+        <a href="06-conflict.html">9. Conflicts</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -488,7 +488,21 @@ tab.</li>
 <li>Make inline comments or suggested changes in the <strong>Files
 changed</strong> tab using the diff.</li>
 </ul></section><section id="Break"><h2 class="section-heading"><a href="Break.html">Break</a></h2>
-<hr class="half-width"></section><section id="05-forks"><h2 class="section-heading"><a href="05-forks.html">Forks</a></h2>
+<hr class="half-width"></section><section id="07-history"><h2 class="section-heading"><a href="07-history.html">History</a></h2>
+<hr class="half-width">
+<ul>
+<li>
+<code>git log --decorate --oneline --graph</code> lets you visualise
+your repository history in graph form.</li>
+<li>There are three options for merging your feature branch into
+<code>main</code>.</li>
+<li>merge: creates a merge commit and results in a non-linear history
+unless you first rebase your feature branch.</li>
+<li>squash and merge: squashes all your feature branch commits into one
+merge commit on <code>main</code>. Your history is linear.</li>
+<li>rebase: re-writes your git history so that all the feature branch
+commits are now on <code>main</code>. Your history is linear.</li>
+</ul></section><section id="05-forks"><h2 class="section-heading"><a href="05-forks.html">Forks</a></h2>
 <hr class="half-width">
 <ul>
 <li>A fork is a server side, in our case GitHub, copy of the
@@ -503,20 +517,6 @@ same file.</li>
 <li>The version control system does not allow people to overwrite each
 other’s changes blindly, but highlights conflicts so that they can be
 resolved.</li>
-</ul></section><section id="07-history"><h2 class="section-heading"><a href="07-history.html">History</a></h2>
-<hr class="half-width">
-<ul>
-<li>
-<code>git log --decorate --oneline --graph</code> lets you visualise
-your repository history in graph form.</li>
-<li>There are three options for merging your feature branch into
-<code>main</code>.</li>
-<li>merge: creates a merge commit and results in a non-linear history
-unless you first rebase your feature branch.</li>
-<li>squash and merge: squashes all your feature branch commits into one
-merge commit on <code>main</code>. Your history is linear.</li>
-<li>rebase: re-writes your git history so that all the feature branch
-commits are now on <code>main</code>. Your history is linear.</li>
 </ul></section><section id="End"><h2 class="section-heading"><a href="End.html">End</a></h2>
 <hr class="half-width"></section><section id="08-rebase"><h2 class="section-heading"><a href="08-rebase.html">Rebasing</a></h2>
 <hr class="half-width">
@@ -594,8 +594,8 @@ branch.</li>
   "url": "https://metoffice.github.io/git-working-practices/instructor/key-points.html",
   "identifier": "https://metoffice.github.io/git-working-practices/instructor/key-points.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2025-02-25",
-  "datePublished": "2025-02-25"
+  "dateModified": "2025-02-26",
+  "datePublished": "2025-02-26"
 }
 
   </script><script>
