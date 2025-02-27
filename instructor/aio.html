@@ -559,7 +559,7 @@ model.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Read" class="tab-pane show active" aria-labelledby="nav-tab-1-Read" role="tabpanel">
+<div id="nav-tabpanel-1-Read" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Read">
 <p>If you can see the repository on GitHub you have read access (or
 higher).</p>
 <p>If you click on a link to a repository and get GitHub’s 404 not found
@@ -570,11 +570,11 @@ organisation.</li>
 <li>Ask the repository admins for read access.</li>
 </ol>
 </div>
-<div id="nav-tabpanel-1-Triage" class="tab-pane" aria-labelledby="nav-tab-1-Triage" role="tabpanel">
+<div id="nav-tabpanel-1-Triage" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Triage">
 <p>If you can add labels and assign yourself to Issues and PRs you have
 triage access (or higher).</p>
 </div>
-<div id="nav-tabpanel-1-Write" class="tab-pane" aria-labelledby="nav-tab-1-Write" role="tabpanel">
+<div id="nav-tabpanel-1-Write" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Write">
 <p>With write access you will be able to edit files on GitHub.</p>
 <ol style="list-style-type: decimal">
 <li>Go to the GitHub repository.</li>
@@ -589,7 +589,7 @@ changes in a project you don’t have write access to.</p>
 <p>If you have write access (or higher), GitHub’s online editor will
 appear.</p>
 </div>
-<div id="nav-tabpanel-1-MaintainandAdmin" class="tab-pane" aria-labelledby="nav-tab-1-MaintainandAdmin" role="tabpanel">
+<div id="nav-tabpanel-1-MaintainandAdmin" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MaintainandAdmin">
 <p>If you have Maintain or Admin privileges you can edit the
 repositories settings. Navigate to the top right
 <strong>Settings</strong> tab from the repository homepage.</p>
@@ -715,7 +715,7 @@ issue</strong>.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>It’s a good idea to remind learners that images can be dropped
 straight into the Issue description. An image of a cloud should do!</p>
@@ -782,7 +782,7 @@ collaborators to give plenty of detail.</li>
 </div>
 </div></section><section id="aio-02-branching"><p>Content from <a href="02-branching.html">Branching Models</a></p>
 <hr>
-<p>Last updated on 2025-02-03 |
+<p>Last updated on 2025-02-27 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/02-branching.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
@@ -904,19 +904,19 @@ config:
 ---
     gitGraph
         accDescr {A git graph showing four branches including the default
-        &lt;code&gt;main&lt;/code&gt; branch.
+        main branch.
         Each circle is a commit.
         A circle with an outline but no fill colour is a merge commit
         where one branch has been merged into another.
-        The two feature branches and the &lt;code&gt;bug_fix&lt;/code&gt; branch
-        all branch off of &lt;code&gt;main&lt;/code&gt; at the same commit.
-        The &lt;code&gt;bug_fix&lt;/code&gt; and &lt;code&gt;small_feature&lt;/code&gt; branches
-        are merged back into &lt;code&gt;main&lt;/code&gt; after
+        The two feature branches and the bug_fix branch
+        all branch off of main at the same commit.
+        The bug_fix and small_feature branches
+        are merged back into main after
         being developed on their branches.
-        The &lt;code&gt;large_feature&lt;/code&gt; branch merges in the
-        changes to &lt;code&gt;main&lt;/code&gt; to fix any conflicts
+        The large_feature branch merges in the
+        changes to main to fix any conflicts
         before the feature is ready to be merged
-        back into the &lt;code&gt;main&lt;/code&gt; branch via a pull request.}
+        back into the main branch via a pull request.}
         commit
         branch bug_fix
         checkout main
@@ -1163,7 +1163,7 @@ such as prefixing the branch name by <code>feature</code>,
   Older Versions of Git / JASMIN Users
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>The <code>git switch</code> command was added in Git version
 <strong>2.23</strong>. To check your version run:</p>
@@ -1280,7 +1280,7 @@ refresh your browser to see the new branch.</p>
   fatal: no upstream branch
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>If you see a message similar to the following:</p>
 <div class="codewrapper">
@@ -1317,7 +1317,7 @@ push from a new branch.</p>
   Some more about remotes
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p>In this episode and in the git-novice lesson, our local repository
 only had a single “remote”, called <code>origin</code>. A remote is a
@@ -1751,7 +1751,7 @@ repository</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Update your local copy of the <code>git-training-demo</code>
@@ -1896,7 +1896,7 @@ changed</strong> tab using the diff.</li>
     end</code></pre>
 <p>Take a break - get up and move about.</p></section><section id="aio-07-history"><p>Content from <a href="07-history.html">History</a></p>
 <hr>
-<p>Last updated on 2025-02-26 |
+<p>Last updated on 2025-02-27 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/07-history.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -1990,7 +1990,7 @@ examples below we start with the same git history.</p>
 <hr class="half-width">
 <p>Starting with:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the &lt;code&gt;main&lt;/code&gt; branch with a &lt;code&gt;feature&lt;/code&gt; branch branching off at the second commit of &lt;code&gt;main&lt;/code&gt;.}
+    accDescr {A Git graph showing the main branch with a feature branch branching off at the second commit of main.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     branch feature
@@ -2002,7 +2002,7 @@ examples below we start with the same git history.</p>
     commit id: 'cd2db46 Cool feature docs'</code></pre>
 <p>Using merge creates a merge commit joining the two branches:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the result of merging a &lt;code&gt;feature&lt;/code&gt; branch with the &lt;code&gt;main&lt;/code&gt; branch. The history is non-linear in this case and difficult to read.}
+    accDescr {A Git graph showing the result of merging a feature branch with the main branch. The history is non-linear in this case and difficult to read.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     branch feature
@@ -2026,7 +2026,7 @@ history of your repository.</p>
 <hr class="half-width">
 <p>Starting with:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the &lt;code&gt;main&lt;/code&gt; branch with a &lt;code&gt;feature&lt;/code&gt; branch branching off at the second commit of &lt;code&gt;main&lt;/code&gt;.}
+    accDescr {A Git graph showing the main branch with a feature branch branching off at the second commit of main.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     branch feature
@@ -2039,7 +2039,7 @@ history of your repository.</p>
 <p>Squashing before merging squashes all the commits on the feature
 branch into one commit which is then merged onto main:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the result of squashing then merging a &lt;code&gt;feature&lt;/code&gt; branch with the &lt;code&gt;main&lt;/code&gt; branch.}
+    accDescr {A Git graph showing the result of squashing then merging a feature branch with the main branch.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     commit id: '62440f8'
@@ -2057,7 +2057,7 @@ into small pieces so you avoid huge branches.</p>
 <hr class="half-width">
 <p>Starting with:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the &lt;code&gt;main&lt;/code&gt; branch with a &lt;code&gt;feature&lt;/code&gt; branch branching off at the second commit of &lt;code&gt;main&lt;/code&gt;.}
+    accDescr {A Git graph showing the main branch with a feature branch branching off at the second commit of main.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     branch feature
@@ -2071,7 +2071,7 @@ into small pieces so you avoid huge branches.</p>
 branch commits from the <code>feature</code> branch and adding them to
 <code>main</code>:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the result of rebasing a &lt;code&gt;feature&lt;/code&gt; branch with the &lt;code&gt;main&lt;/code&gt; branch.}
+    accDescr {A Git graph showing the result of rebasing a feature branch with the main branch.}
     commit id: '4631ebc'
     commit id: 'ee406ac'
     commit id: '62440f8'
@@ -2300,7 +2300,7 @@ instructors.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Take a break here! This will give you and your co-instructor time to
 approve, and squash and merge the PRs.</p>
@@ -2486,7 +2486,7 @@ Documentation</a> has more information on linking PRs to Issues.<a href="#fnref2
 </ol>
 </div></section><section id="aio-06-conflict"><p>Content from <a href="06-conflict.html">Conflicts</a></p>
 <hr>
-<p>Last updated on 2025-02-26 |
+<p>Last updated on 2025-02-27 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/06-conflict.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -2704,8 +2704,8 @@ upstream repositories <code>main</code> branch.</p>
 <code>main</code> branch into our feature branch
 <code>7_add-citation-fitzroy</code>:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A git graph showing the &lt;code&gt;main&lt;/code&gt; branch being merged
-    into the &lt;code&gt;7_add-citation-fitzroy&lt;/code&gt; branch to resolve merge conflicts.}
+    accDescr {A git graph showing the main branch being merged
+    into the 7_add-citation-fitzroy branch to resolve merge conflicts.}
     commit id: 'cdb7fa6'
     branch 7_add-citation-fitzroy
     commit id: 'a3c5e13 Adds Robert Fitzroy as an author'
@@ -3156,7 +3156,7 @@ up some basic checks.</li>
 </ul>
 </div></section><section id="aio-08-rebase"><p>Content from <a href="08-rebase.html">Rebasing</a></p>
 <hr>
-<p>Last updated on 2025-01-22 |
+<p>Last updated on 2025-02-27 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/08-rebase.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -3237,7 +3237,7 @@ commits to your repository:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3263,7 +3263,7 @@ commits to your repository:</p>
  create mode 100644 plot_lfric.py</code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3288,7 +3288,7 @@ commits to your repository:</p>
  1 file changed, 1 insertion(+)</code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
+<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3318,7 +3318,7 @@ commits to your repository:</p>
 <p>Before you push to the remote and open a PR you check your git
 history. The git history now looks something like this:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the &lt;code&gt;main&lt;/code&gt; branch with the &lt;code&gt;add_plot_script&lt;/code&gt; branch branching off at the first commit of &lt;code&gt;main&lt;/code&gt;.}
+    accDescr {A Git graph showing the main branch with the add_plot_script branch branching off at the first commit of main.}
     commit id: 'ed14d18'
     branch add_plot_script
     checkout add_plot_script
@@ -3613,7 +3613,7 @@ re-attached <code>HEAD</code> to point to the new most recent commit,
 <code>HEAD</code> of <code>main</code>. While we rebased our feature
 branch another PR was merged with <code>main</code>:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the &lt;code&gt;main&lt;/code&gt; branch with the &lt;code&gt;add_plot_script&lt;/code&gt; branch branching off at the first commit of &lt;code&gt;main&lt;/code&gt;.}
+    accDescr {A Git graph showing the main branch with the add_plot_script branch branching off at the first commit of main.}
     commit id: 'ed14d18'
     branch add_plot_script
     checkout add_plot_script
@@ -3625,7 +3625,7 @@ branch another PR was merged with <code>main</code>:</p>
 <code>HEAD</code> of <code>main</code>, fixing any conflicts that arise.
 This is what we are aiming for:</p>
 <pre class="mermaid"><code>gitGraph
-    accDescr {A Git graph showing the &lt;code&gt;main&lt;/code&gt; branch with the &lt;code&gt;add_plot_script&lt;/code&gt; branch branching off at the second commit of &lt;code&gt;main&lt;/code&gt;.}
+    accDescr {A Git graph showing the main branch with the add_plot_script branch branching off at the second commit of main.}
     commit id: 'ed14d18'
     commit id: '4rtzk8g'
     branch add_plot_script
@@ -3768,7 +3768,7 @@ Which keyword lets you edit the commit message?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Edit the commit message:</p>
 <pre class="text"><code><span><span class="co"># r, reword &lt;commit&gt; = use commit, but edit the commit message</span></span></code></pre>
@@ -3803,7 +3803,7 @@ keywords and/or line-reordering would have given us the same result?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3908,14 +3908,14 @@ conda:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> pip install pre-commit</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3985,7 +3985,7 @@ hooks for security.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The pre-commit check for not committing to main fails so
 <code>git commit</code> wasn’t run. Your changes are still staged.</p>
@@ -4098,8 +4098,8 @@ Changes to be committed:
   "url": "https://metoffice.github.io/git-working-practices/instructor/aio.html",
   "identifier": "https://metoffice.github.io/git-working-practices/instructor/aio.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2025-02-26",
-  "datePublished": "2025-02-26"
+  "dateModified": "2025-02-27",
+  "datePublished": "2025-02-27"
 }
 
   </script><script>
