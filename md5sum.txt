@@ -19,5 +19,5 @@
 "learners/discuss.md" "aaef6991af918125ae722d3ce4e36443" "site/built/discuss.md" "2024-11-19"
 "learners/fcm-git_cheat_sheet.md" "a90c25c1218a18430dd67a243e63533e" "site/built/fcm-git_cheat_sheet.md" "2024-11-19"
 "learners/reference.md" "d976a57639fa49361d9c8431850cde6a" "site/built/reference.md" "2024-11-19"
-"learners/setup.md" "d0b5f54a8f8128f546a355b4f3518f9d" "site/built/setup.md" "2025-02-25"
+"learners/setup.md" "462ca0801200cc01c164d857821ade82" "site/built/setup.md" "2025-02-28"
 "profiles/learner-profiles.md" "637cf5fe68afa1af6ce393717126f011" "site/built/learner-profiles.md" "2025-01-09"
