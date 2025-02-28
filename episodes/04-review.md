@@ -164,6 +164,21 @@ you can approve the PR:
 Swap back to the Conversations tab.
 The PR is now ready to merge and has no conflicts with the
 base (`main` in this case) branch.
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+Important!
+
+> Click any of the 3 merge options
+
+The two instructors can select
+squash and merge, and rebase and merge.
+Some learners will have skipped ahead and already clicked
+on a normal merge.
+This guarantees the repository history shows all three merge types.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 Click any of the 3 merge options; don't forget to move the PR
 number to the start of the commit message like you did
 in the Version Control with Git lesson:
@@ -206,6 +221,16 @@ Click on the number to take you to the closed PR.
 Head over to the repositories **Issues** tab.
 Check that your Issue for adding your favourite cloud file
 was closed when you merged the PR.
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+There may not be time for learners to complete the challenge
+(updating their local main branch and deleting their local feature branch).
+You should update your local main branch and use `git log --oneline --graph`
+to demonstrate the messy history that has been created due to
+each learner selecting a random merge strategy in their PRs.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
