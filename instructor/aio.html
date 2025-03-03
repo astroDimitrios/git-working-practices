@@ -559,7 +559,7 @@ model.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Read" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Read">
+<div id="nav-tabpanel-1-Read" class="tab-pane show active" aria-labelledby="nav-tab-1-Read" role="tabpanel">
 <p>If you can see the repository on GitHub you have read access (or
 higher).</p>
 <p>If you click on a link to a repository and get GitHub’s 404 not found
@@ -570,11 +570,11 @@ organisation.</li>
 <li>Ask the repository admins for read access.</li>
 </ol>
 </div>
-<div id="nav-tabpanel-1-Triage" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Triage">
+<div id="nav-tabpanel-1-Triage" class="tab-pane" aria-labelledby="nav-tab-1-Triage" role="tabpanel">
 <p>If you can add labels and assign yourself to Issues and PRs you have
 triage access (or higher).</p>
 </div>
-<div id="nav-tabpanel-1-Write" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Write">
+<div id="nav-tabpanel-1-Write" class="tab-pane" aria-labelledby="nav-tab-1-Write" role="tabpanel">
 <p>With write access you will be able to edit files on GitHub.</p>
 <ol style="list-style-type: decimal">
 <li>Go to the GitHub repository.</li>
@@ -589,7 +589,7 @@ changes in a project you don’t have write access to.</p>
 <p>If you have write access (or higher), GitHub’s online editor will
 appear.</p>
 </div>
-<div id="nav-tabpanel-1-MaintainandAdmin" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MaintainandAdmin">
+<div id="nav-tabpanel-1-MaintainandAdmin" class="tab-pane" aria-labelledby="nav-tab-1-MaintainandAdmin" role="tabpanel">
 <p>If you have Maintain or Admin privileges you can edit the
 repositories settings. Navigate to the top right
 <strong>Settings</strong> tab from the repository homepage.</p>
@@ -710,7 +710,7 @@ issue</strong>.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>It’s a good idea to remind learners that images can be dropped
 straight into the Issue description. An image of a cloud should do!</p>
@@ -1072,7 +1072,7 @@ with feature branches.</li>
 </div>
 </section></section><section id="aio-03-feature-branch"><p>Content from <a href="03-feature-branch.html">Feature Branch Model</a></p>
 <hr>
-<p>Last updated on 2025-02-26 |
+<p>Last updated on 2025-03-03 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/03-feature-branch.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 45 minutes</p>
@@ -1111,6 +1111,24 @@ the <code>git-training-demo</code> repository.</p>
 <p>You will need to get into pairs so that you can review each others
 code changes. Your instructor may have already paired you with another
 learner.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Working through the material independently
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>If you are working through the material in your own time, you will be
+able to complete all the steps in this episode without another learner.
+At the end of this episode you will need to wait for a repository admin
+to review your work.</p>
+</div>
+</div>
+</div>
+</div>
 <section><h2 class="section-heading" id="cloning-a-repository">Cloning a Repository<a class="anchor" aria-label="anchor" href="#cloning-a-repository"></a>
 </h2>
 <hr class="half-width">
@@ -1150,15 +1168,15 @@ change on:</p>
 Episode 2 Issues. Your team may choose a different naming convention
 such as prefixing the branch name by <code>feature</code>,
 <code>bug</code> etc.</p>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Older Versions of Git / JASMIN Users
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>The <code>git switch</code> command was added in Git version
 <strong>2.23</strong>. To check your version run:</p>
@@ -1267,15 +1285,15 @@ git-novice lesson when we were setting up remotes by hand.</p>
 <p>Take a look at the repository on GitHub again, and you should be able
 to see the <code>1_favourite_cloud</code> branch. You may need to
 refresh your browser to see the new branch.</p>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   fatal: no upstream branch
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>If you see a message similar to the following:</p>
 <div class="codewrapper">
@@ -1304,15 +1322,15 @@ push from a new branch.</p>
 </div>
 </div>
 </div>
-<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
-  <h3 class="accordion-header" id="headingSpoiler3">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Some more about remotes
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <p>In this episode and in the git-novice lesson, our local repository
 only had a single “remote”, called <code>origin</code>. A remote is a
@@ -1976,7 +1994,7 @@ strategy is best for your repository.</p>
   Viewing History
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>In the <a href="https://www.astropython.com/git-novice/05-history.html" class="external-link">Introduction
 to Version Control with Git</a> lesson you learnt that we can use the
@@ -2332,7 +2350,7 @@ instructors.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Take a break here! This will give you and your co-instructor time to
 approve, and squash and merge the PRs.</p>
@@ -3269,7 +3287,7 @@ commits to your repository:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3295,7 +3313,7 @@ commits to your repository:</p>
  create mode 100644 plot_lfric.py</code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3320,7 +3338,7 @@ commits to your repository:</p>
  1 file changed, 1 insertion(+)</code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
+<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3800,7 +3818,7 @@ Which keyword lets you edit the commit message?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Edit the commit message:</p>
 <pre class="text"><code><span><span class="co"># r, reword &lt;commit&gt; = use commit, but edit the commit message</span></span></code></pre>
@@ -3835,7 +3853,7 @@ keywords and/or line-reordering would have given us the same result?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3940,14 +3958,14 @@ conda:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> pip install pre-commit</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>

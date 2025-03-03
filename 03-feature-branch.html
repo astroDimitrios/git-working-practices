@@ -384,7 +384,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Feature Branch Model</h1>
-        <p>Last updated on 2025-02-26 |
+        <p>Last updated on 2025-03-03 |
 
         <a href="https://github.com/metoffice/git-working-practices/edit/main/episodes/03-feature-branch.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -424,6 +424,24 @@ the <code>git-training-demo</code> repository.</p>
 <p>You will need to get into pairs so that you can review each others
 code changes. Your instructor may have already paired you with another
 learner.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Working through the material independently
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>If you are working through the material in your own time, you will be
+able to complete all the steps in this episode without another learner.
+At the end of this episode you will need to wait for a repository admin
+to review your work.</p>
+</div>
+</div>
+</div>
+</div>
 <section><h2 class="section-heading" id="cloning-a-repository">Cloning a Repository<a class="anchor" aria-label="anchor" href="#cloning-a-repository"></a></h2>
 <hr class="half-width"><p>You will both need to download a copy of the
 <code>git-training-demo</code> repository. This is called “cloning a
@@ -459,15 +477,15 @@ change on:</p>
 Episode 2 Issues. Your team may choose a different naming convention
 such as prefixing the branch name by <code>feature</code>,
 <code>bug</code> etc.</p>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Older Versions of Git / JASMIN Users
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>The <code>git switch</code> command was added in Git version
 <strong>2.23</strong>. To check your version run:</p>
@@ -576,15 +594,15 @@ git-novice lesson when we were setting up remotes by hand.</p>
 <p>Take a look at the repository on GitHub again, and you should be able
 to see the <code>1_favourite_cloud</code> branch. You may need to
 refresh your browser to see the new branch.</p>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   fatal: no upstream branch
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>If you see a message similar to the following:</p>
 <div class="codewrapper">
@@ -613,15 +631,15 @@ push from a new branch.</p>
 </div>
 </div>
 </div>
-<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
-  <h3 class="accordion-header" id="headingSpoiler3">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Some more about remotes
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <p>In this episode and in the git-novice lesson, our local repository
 only had a single “remote”, called <code>origin</code>. A remote is a
@@ -908,7 +926,7 @@ reviewers.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
   "url": "https://metoffice.github.io/git-working-practices/03-feature-branch.html",
   "identifier": "https://metoffice.github.io/git-working-practices/03-feature-branch.html",
   "dateCreated": "2024-11-11",
-  "dateModified": "2025-02-26",
+  "dateModified": "2025-03-03",
   "datePublished": "2025-03-03"
 }
 
