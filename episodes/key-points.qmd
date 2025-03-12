@@ -10,9 +10,9 @@
 {{< include 01-issues.md >}}
 
 
-# [Branching Models](02-branching.md)
+# [Branching Models](02-branching.qmd)
 
-{{< include 02-branching.md >}}
+{{< include 02-branching.qmd >}}
 
 
 # [Feature Branch Model](03-feature-branch.md)
@@ -20,29 +20,29 @@
 {{< include 03-feature-branch.md >}}
 
 
-# [Review](04-review.md)
+# [Review](04-review.qmd)
 
-{{< include 04-review.md >}}
-
-
-# [Break](Break.md)
-
-{{< include Break.md >}}
+{{< include 04-review.qmd >}}
 
 
-# [Forks](05-forks.md)
+# [Break](Break.qmd)
 
-{{< include 05-forks.md >}}
-
-
-# [Conflicts](06-conflict.md)
-
-{{< include 06-conflict.md >}}
+{{< include Break.qmd >}}
 
 
-# [History](07-history.md)
+# [Forks](05-forks.qmd)
 
-{{< include 07-history.md >}}
+{{< include 05-forks.qmd >}}
+
+
+# [Conflicts](06-conflict.qmd)
+
+{{< include 06-conflict.qmd >}}
+
+
+# [History](07-history.qmd)
+
+{{< include 07-history.qmd >}}
 
 
 # [End](End.md)
@@ -50,9 +50,9 @@
 {{< include End.md >}}
 
 
-# ['Rebasing'](08-rebase.md)
+# ['Rebasing'](08-rebase.qmd)
 
-{{< include 08-rebase.md >}}
+{{< include 08-rebase.qmd >}}
 
 
 # ['Pre-commit'](09-pre-commit.md)

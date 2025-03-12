@@ -11,11 +11,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
 <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
 <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
-            <meta name="generator" content="quarto-1.6.40">
+            <meta name="generator" content="quarto-1.6.42">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,6 +76,9 @@
                            "search-label": "Search"
                          }
                        }</script>
+              <script  src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+              <script  src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+              <link  href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet" />
              -->  </head>
   <body>
         <div id="quarto-search-results"></div>
@@ -552,38 +555,49 @@
                                                <li>Respond to review</li>
                                                <li>Update your local copy and tidy up your branches</li>
                                                </ol>
-                                               <pre class="mermaid"><code>sequenceDiagram
-    accDescr {A sequence diagram showing the steps for the branching model.}
-    autonumber
-    participant GHM as origin main
-    participant GHF as origin feature
-    participant M as main
-    GHM --&gt;&gt; GHM: #f
-    Note over GHM: Open an Issue for the change
-    GHM --&gt;&gt; M: #f
-    Note right of GHM: First time: git clone&lt;br/&gt;Then: git pull
-    create participant F as feature
-    M -&gt;&gt; F: Create a feature branch:&lt;br/&gt;git switch -c feature
-    loop
-        F -&gt;&gt; F: #f
-        Note over F: Develop changes:&lt;br/&gt;git add&lt;br/&gt;git commit
-    end
-    F --&gt;&gt; GHF: #f
-    Note left of F: Push to GitHub: git push&lt;br/&gt;The first push creates origin feature!
-    destroy GHF
-    GHF -&gt;&gt; GHM: #f
-    Note left of GHF: Pull Request and then Merge.&lt;br/&gt;Delete origin feature branch.
-    GHM --&gt;&gt; M: #f
-    Note right of GHM: git pull
-    Note over F: Delete branch:&lt;br/&gt;git branch -D feature
-    box GitHub Remote
-    participant GHM
-    participant GHF
-    end
-    box Local
-    participant M
-    participant F
-    end</code></pre>
+                                               <div class="cell" data-layout-align="default">
+                                               <div class="cell-output-display">
+                                               <div>
+                                               <p></p><figure class="figure"><p></p>
+                                               <div>
+                                               <pre class="mermaid mermaid-js">sequenceDiagram
+                                                   accDescr {A sequence diagram showing the steps for the branching model.}
+                                                   autonumber
+                                                   participant GHM as origin main
+                                                   participant GHF as origin feature
+                                                   participant M as main
+                                                   GHM --&gt;&gt; GHM: #f
+                                                   Note over GHM: Open an Issue for the change
+                                                   GHM --&gt;&gt; M: #f
+                                                   Note right of GHM: First time: git clone&lt;br/&gt;Then: git pull
+                                                   create participant F as feature
+                                                   M -&gt;&gt; F: Create a feature branch:&lt;br/&gt;git switch -c feature
+                                                   loop
+                                                       F -&gt;&gt; F: #f
+                                                       Note over F: Develop changes:&lt;br/&gt;git add&lt;br/&gt;git commit
+                                                   end
+                                                   F --&gt;&gt; GHF: #f
+                                                   Note left of F: Push to GitHub: git push&lt;br/&gt;The first push creates origin feature!
+                                                   destroy GHF
+                                                   GHF -&gt;&gt; GHM: #f
+                                                   Note left of GHF: Pull Request and then Merge.&lt;br/&gt;Delete origin feature branch.
+                                                   GHM --&gt;&gt; M: #f
+                                                   Note right of GHM: git pull
+                                                   Note over F: Delete branch:&lt;br/&gt;git branch -D feature
+                                                   box GitHub Remote
+                                                   participant GHM
+                                                   participant GHF
+                                                   end
+                                                   box Local
+                                                   participant M
+                                                   participant F
+                                                   end
+                                               </pre>
+                                               </div>
+                                               <p></p></figure><p></p>
+                                               </div>
+                                               </div>
+                                               </div>
                                                <p>Take a break - get up and move about.</p>
                                                
                                                

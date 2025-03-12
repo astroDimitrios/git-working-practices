@@ -12,7 +12,7 @@
 
 # Branching Models
 
-{{< include 02-branching.md >}}
+{{< include 02-branching.qmd >}}
 
 
 # Feature Branch Model
@@ -22,27 +22,27 @@
 
 # Review
 
-{{< include 04-review.md >}}
+{{< include 04-review.qmd >}}
 
 
 # Break
 
-{{< include Break.md >}}
+{{< include Break.qmd >}}
 
 
 # Forks
 
-{{< include 05-forks.md >}}
+{{< include 05-forks.qmd >}}
 
 
 # Conflicts
 
-{{< include 06-conflict.md >}}
+{{< include 06-conflict.qmd >}}
 
 
 # History
 
-{{< include 07-history.md >}}
+{{< include 07-history.qmd >}}
 
 
 # End
@@ -52,7 +52,7 @@
 
 # 'Rebasing'
 
-{{< include 08-rebase.md >}}
+{{< include 08-rebase.qmd >}}
 
 
 # 'Pre-commit'
@@ -69,7 +69,7 @@ format:
     footer: 'Git & GitHub Working Practices: Extract All Images'
     scrollable: true
     auto-stretch: false
-    mermaid-format: svg
+    mermaid-format: png
     include-in-header: 
       text: |
         <style>

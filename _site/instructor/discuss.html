@@ -11,11 +11,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/themetoggle.js"></script>
 <script src="../site_libs/quarto-contrib/carpentries-theme-toggle-1.0.0/scripts.js"></script>
 <link href="../site_libs/quarto-contrib/carpentries-css-1.0.0/styles.css" rel="stylesheet"><meta charset="utf-8">
-            <meta name="generator" content="quarto-1.6.40">
+            <meta name="generator" content="quarto-1.6.42">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -550,6 +550,14 @@
           </div><!-- /div.sidebar -->
         </div><!-- /div.sidebar-col -->                                <section id="frequently-asked-questions" class="level2">
                       <h2 class="anchored" data-anchor-id="frequently-asked-questions">Frequently Asked Questions</h2>
+                      <ol type="1">
+                      <li>Does Git default to origin if you run <code>git fetch</code> without origin/upstream? From the <a href="https://git-scm.com/docs/git-fetch">Git documentation</a>: When no remote is specified, by default the origin remote will be used, unless there’s an upstream branch configured for the current branch.</li>
+                      <li>Can you rename the upstream remote? Yes see the <a href="03-feature-branch.html#some-more-about-remotes">spoiler on remotes</a>. You should note that the names <code>origin</code> and <code>upstream</code> are just conventions. You may use any name for the remotes but it may be confusing for new collaborators who expect origin/upstream.</li>
+                      <li>What do you do if you add the wrong remote link? Change the remote url, or remove the remote and add the remote again. See the <a href="03-feature-branch.html#some-more-about-remotes">spoiler on remotes</a> for the relevant Git commands.</li>
+                      <li>How often should you commit changes? You learnt in the Introduction to Version Control with Git and GitHub lesson that commits should occur often and be atomic. That is contain one small change at a time. Committing often (at most every couple of hours) and pushing straight after committing helps avoid losing any work.</li>
+                      <li>Can you have chains of forks? Or a colleagues fork as a remote? Yes to both! Although the latter would be an unusual working practice, we’d recommend seeking advice before adding a colleague’s fork as another remote on your local repository. Chains of forks are common. If a GitHub user has read access to your repository they can create a fork.</li>
+                      <li>How many repositories can I have? “With GitHub Free for personal accounts and organizations, you can work with unlimited collaborators on unlimited public repositories with a full feature set, or unlimited private repositories with a limited feature set.” <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories">About repositories - GitHub Docs</a></li>
+                      </ol>
                       
                       
                       </section>

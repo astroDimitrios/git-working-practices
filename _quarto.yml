@@ -30,15 +30,15 @@ carpentries:
   episodes:
     - 00-repo-access.md
     - 01-issues.md
-    - 02-branching.md
+    - 02-branching.qmd
     - 03-feature-branch.md
-    - 04-review.md
-    - Break.md
-    - 05-forks.md
-    - 06-conflict.md
-    - 07-history.md
+    - 04-review.qmd
+    - Break.qmd
+    - 05-forks.qmd
+    - 06-conflict.qmd
+    - 07-history.qmd
     - End.md
-    - 08-rebase.md
+    - 08-rebase.qmd
     - 09-pre-commit.md
   # Information for Learners
   resources: True

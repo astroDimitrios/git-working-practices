@@ -154,7 +154,7 @@ function write_all_images_file(episodes)
     aio_content = aio_content.."    footer: '"..title..": Extract All Images'\n"
     aio_content = aio_content.."    scrollable: true\n"
     aio_content = aio_content.."    auto-stretch: false\n"
-    aio_content = aio_content.."    mermaid-format: svg\n"
+    aio_content = aio_content.."    mermaid-format: png\n"
     aio_content = aio_content..center_slide_contents_style
     aio_content = aio_content.."filters:\n  - "..dir.."/_extensions/astrodimitrios/carpentries/images-filter.lua\n"
     aio_content = aio_content.."---\n"
