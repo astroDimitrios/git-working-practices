@@ -35,28 +35,6 @@ branch: 'main'
 # Who to contact if there are any issues
 contact: 'd.theodorakis@metoffice.gov.uk'
 
-# Navigation ------------------------------------------------
-#
-# Use the following menu items to specify the order of
-# individual pages in each dropdown section. Leave blank to
-# include all pages in the folder.
-#
-# Example -------------
-#
-# episodes:
-# - introduction.md
-# - first-steps.md
-#
-# learners:
-# - setup.md
-#
-# instructors:
-# - instructor-notes.md
-#
-# profiles:
-# - one-learner.md
-# - another-learner.md
-
 # Order of episodes in your lesson
 episodes:
 - 00-repo-access.md
@@ -74,6 +52,11 @@ episodes:
 
 # Information for Learners
 learners:
+- discuss.md
+- reference.md
+- feature-branch-dev.md
+- forking-dev.md
+- fcm-git_cheat_sheet.md
 
 # Information for Instructors
 instructors:
