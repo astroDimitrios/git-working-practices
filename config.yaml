@@ -35,6 +35,12 @@ branch: 'main'
 # Who to contact if there are any issues
 contact: 'd.theodorakis@metoffice.gov.uk'
 
+# Navigation ------------------------------------------------
+#
+# Use the following menu items to specify the order of
+# individual pages in each dropdown section. Leave blank to
+# include all pages in the folder.
+
 # Order of episodes in your lesson
 episodes:
 - 00-repo-access.md
